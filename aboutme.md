@@ -1,7 +1,12 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Why I occassionally think that sharing my thoughts might be slightly useful.
+cover-img: /assets/img/crawfish-banner.jpg
+thumbnail-img: /assets/img/crawfish-posing-crop-square-01.jpg
+share-img: /assets/img/crawfish-posing-crop-square-01.jpg
+tags:
+  - musings
 published: true
 ---
 
