@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why great companies enable great things via Free Services
+title: Great companies enable great things via Free Services
 subtitle: (i.e. Free services enable folks like me to share our ideas)
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: /assets/img/crawfish-posing-crop-square-01.jpg
