@@ -6,7 +6,7 @@ cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: /assets/img/crawfish-posing-crop-square-01.png
 share-img: /assets/img/crawfish-posing-crop-square-01.jpg
 tags:
-  - musing
+  - musings
 published: true
 ---
 # Geaux Code!!!
@@ -18,4 +18,3 @@ Based on the **Beautiful Jekyll** theme, running on Github Pages, using CloudFla
 //TODO:  Update with something helpful about how I set this up with GitPages & Cloudflare!
 
 > *Geaux Code Blog &middot; Created by [Brandon Bernard](https://cajuncoding.com)*
-
