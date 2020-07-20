@@ -4,7 +4,7 @@
 title: CajunCoding.com
 
 # Short description of your site
-description: My channel for sharing musings & ideas on software development, business, technology, photography, the list goes on and on...but mostly about Code
+description: My channel for sharing musings & ideas on software development, business, technology, photography, the list goes on and on...but mostly about Code!
 
 # Your name to show in the footer
 author: Brandon Bernard (@cajuncoding)
@@ -17,7 +17,7 @@ navbar-links:
   #  - Beautiful Jekyll: "https://beautifuljekyll.com"
   #  - Learn markdown: "https://www.markdowntutorial.com/"
   Home: "http://cajuncoding.com"
-  Linked-In: "https://www.linkedin.com/in/brandon-bernard/"
+  LinkedIn: "https://www.linkedin.com/in/brandon-bernard/"
 
 # --- Logo --- #
 
