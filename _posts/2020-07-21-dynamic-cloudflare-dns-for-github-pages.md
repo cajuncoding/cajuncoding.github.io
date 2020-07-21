@@ -36,7 +36,7 @@ That's it, one screeshot, Done! Our DNS is now complete.
 
 To allow serving our content via our custom domain, we do need to enable this on the GitHub side, but they make it just as easy here too. 
 
-[Documented here...](https://docs.github.com/en/github/working-with-github-pages/about-custom-domains-and-github-pages) We could createa CNAME file manually. 
+[Documented here...](https://docs.github.com/en/github/working-with-github-pages/about-custom-domains-and-github-pages) We could create a CNAME file manually. 
 
 But their UI is super easy and takes care of this for us.  In your repo, navigate to **Settings -> Options** and scroll on down to **GitHub Pages**.  Finally enter the domain, just as you did in CloudFlare, here so that GitHub will properly route/handle all requests from that domain by serving content from your repo.
 
