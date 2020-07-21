@@ -1,23 +1,23 @@
 # --- Basic options --- #
 
 # Name of website
-title: CajunCoding.com
+title: Geaux Code Blog
 
 # Short description of your site
 description: My channel for sharing musings & ideas on software development, business, technology, photography, the list goes on and on...but mostly about Code!
 
 # Your name to show in the footer
-author: Brandon Bernard (@cajuncoding)
+author: Brandon Bernard
 
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
   Resources:
     - Photography (Flickr): "https://www.flickr.com/photos/77885066@N06/"
   #  - Beautiful Jekyll: "https://beautifuljekyll.com"
   #  - Learn markdown: "https://www.markdowntutorial.com/"
   #Home: "http://cajuncoding.com"
+  About Me: "aboutme"
   LinkedIn: "https://www.linkedin.com/in/brandon-bernard/"
 
 # --- Logo --- #
@@ -107,7 +107,7 @@ footer-link-col: "#404040"
 # --- Web Statistics Section --- #
 
 # Fill in your Google Analytics gtag.js ID to track your website using gtag
-#gtag: ""
+gtag: "UA-173225875-1"
 
 # Fill in your Google Analytics ID to track your website using GA
 #google_analytics: ""
