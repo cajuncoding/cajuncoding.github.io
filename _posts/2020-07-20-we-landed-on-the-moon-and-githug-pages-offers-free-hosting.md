@@ -68,4 +68,4 @@ After deep diviing into these other awesome blogs with great info. and GitHub's 
 
 But, I don't want to repeat the same info. as the above sites provide... I will say that the instructions provided by [**BeautifulJekyll**](https://beautifuljekyll.com/) are all you need to get up and running!
 
-### And in the next article, I'll outline the practical learning from all this -- the extremely simplified steps for setting up the custom domain with CloudFlare & GitHub Pages!
+**And in the next article, I'll outline the practical learning from all this -- the extremely simplified steps for setting up the custom domain with CloudFlare & GitHub Pages!**
