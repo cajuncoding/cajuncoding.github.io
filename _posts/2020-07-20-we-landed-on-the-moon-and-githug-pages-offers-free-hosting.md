@@ -15,7 +15,7 @@ Err, I felt just like this when I recently followed an idea, that I had, down th
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-f_DPrSEOEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
+  
 ## Ok let's start at the end...
 Welcome to the new home of the _Geax Code_ blog... my channel for sharing musings &amp; ideas on code, business, technology, photography, the list goes on and on.... but mostly about Code!
 
@@ -29,9 +29,9 @@ Now, I do pay for the domain [cajuncoding.com](http://cajuncoding.com), but othe
 
 It's these kinds of generous & free services from great companies that enable folks like me to share our ideas! And, this positive spiral of sharing is what keeps propelling the pace of innovative software, solutions, and technology.  
 
-_Side thought:_ I was talking to my wife about this recently and she shared that, as a Civil Engineer, she's inspired by community and culture of sharing that the world of Software Development and Open Source communities have become.
+_Side thought:_ I was talking to my wife about this recently and she shared that, as a Civil Engineer, she's truly inspired by the community and culture of sharing that the world of Software Development and Open Source communities have become.
 
-If you made it here then I truly hope that you have find something that I've shared to be useful, even if it's to learn _what not to do_.
+Anyhow, if you made it here then I truly hope that you have find something that I've shared to be useful, even if it's to learn _what not to do_.
 
 <a name="rabbit-hole"></a>
 ## What was that rabbit hole?
@@ -69,4 +69,3 @@ After deep diviing into these other awesome blogs with great info. and GitHub's 
 But, I don't want to repeat the same info. as the above sites provide... I will say that the instructions provided by [**BeautifulJekyll**](https://beautifuljekyll.com/) are all you need to get up and running!
 
 ### And in the next article, I'll outline the practical learning from all this -- the extremely simplified steps for setting up the custom domain with CloudFlare & GitHub Pages!
-
