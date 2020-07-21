@@ -28,7 +28,7 @@ CloudFlare addresses this with what they call [**CName Flattening**](https://blo
 
 I'll leave you to read the nitty gritty in that link, but for all-intents-and-purposes here, it is CloudFlare's solution that allows us to set up an Apex domain with a **CName** record (e.g. map to another domain name) instead of an **A** record (maps to an statically configured IP address)!
 
-<img src="/assets/img/post-dynamic-cloudflare-dns-for-github-pages/setting-up-cloudflare-apex-domain-dns.jpg" style="width: 100%;height: auto;max-width: 400px;" />
+<img src="/assets/img/post-dynamic-cloudflare-dns-for-github-pages/setting-up-cloudflare-apex-domain-dns.jpg" style="width: 100%;height: auto;max-width: 800px;" />
 
 That's it, one screeshot, Done! Our DNS is now complete.  
 
@@ -40,9 +40,9 @@ To allow serving our content via our custom domain, we do need to enable this on
 
 But their UI is super easy and takes care of this for us.  In your repo, navigate to **Settings -> Options** and scroll on down to **GitHub Pages**.  Finally enter the domain, just as you did in CloudFlare, here so that GitHub will properly route/handle all requests from that domain by serving content from your repo.
 
-<img src="/assets/img/post-dynamic-cloudflare-dns-for-github-pages/github-settings-options.jpg" style="width: 100%;height: auto;max-width: 400px;" />
+<img src="/assets/img/post-dynamic-cloudflare-dns-for-github-pages/github-settings-options.jpg" style="width: 100%;height: auto;max-width: 800px;" />
 
-<img src="/assets/img/post-dynamic-cloudflare-dns-for-github-pages/github-pages-custom-domain-settings.jpg" style="width: 100%;height: auto;max-width: 400px;" />
+<img src="/assets/img/post-dynamic-cloudflare-dns-for-github-pages/github-pages-custom-domain-settings.jpg" style="width: 100%;height: auto;max-width: 800px;" />
 
 _Fyi, this part was also addressed in [Rick Pauloo's write-up above](https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/)_.
 
