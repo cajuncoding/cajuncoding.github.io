@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About me
-subtitle: Why I occassionally think that sharing my thoughts might be slightly useful.
+subtitle: Why I occassionally think that sharing my thoughts might be slightly useful...
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: /assets/img/crawfish-posing-crop-square-01.jpg
 share-img: /assets/img/crawfish-posing-crop-square-01.jpg
@@ -60,4 +60,3 @@ After graudation, I started my professional career in the _Oil & Gas_ field wher
 Eventually my frustrations & passion pushed me out of that one industry and into technology consulting where I could learn about many industries, companies, brands, etc.
 
 It's was then ( _circa November 2007_ ) that I re-tooled my technololgy skills, and really embraced my love for software architecture, business soultion design, and client consulting.
-
