@@ -4,13 +4,15 @@ layout: post
 title: CloudFlare dynamic DNS setup for GitHub Pages
 subtitle: Using a CNAME record instead of traditional A record..
 cover-img: /assets/img/crawfish-banner.jpg
-thumbnail-img: /assets/img/post-dynamic-cloudflare-dns-for-github-pages/cf-logo-v-rgb.png
-share-img: /assets/img/post-dynamic-cloudflare-dns-for-github-pages/cf-logo-v-rgb.png
+thumbnail-img: >-
+  /assets/img/post-dynamic-cloudflare-dns-for-github-pages/cf-logo-v-rgb-edited-square.png
+share-img: >-
+  /assets/img/post-dynamic-cloudflare-dns-for-github-pages/cf-logo-v-rgb-edited-square.png
 tags:
   - architecture
   - github
 ---
-So, here's a practical thing that might be of interest if you have (or want) a domain custom domain (apex or sub-domain) to point to your GitHub Pages site.
+So, here's something practical that might be of interest if you have (or want) a domain custom domain (apex or sub-domain) to point to your GitHub Pages site.
 
 In my last post, I walked through the rabbit hole of research and humble learning I had about some awesome stuff htat has been around since 2008... GitHub Pages and Jekyll site building.
 
@@ -45,8 +47,3 @@ But their UI is super easy and takes care of this for us.  In your repo, navigat
 _Fyi, this part was also addressed in [Rick Pauloo's write-up above](https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/)_.
 
 **That's it, you now have a custom apex domain routed by CloudFlare to a site hosted in Github Pages -- both offerring enterprise performance and reliability!**
-
-
-
-
-
