@@ -28,4 +28,4 @@ So immediately I realized this should be easy, and sure enough it was even easie
 
 //TODO:  Update with additional technical details helpful about how I set this up with GitPages & Cloudflare!
 
-> *Geaux Code Blog &middot; Created by [Brandon Bernard](https://cajuncoding.com)*
+> *Originally Published on 2020/07/20 &middot; Created by [Brandon Bernard](https://cajuncoding.com)*
