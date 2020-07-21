@@ -46,26 +46,26 @@ So then I started thinking about using a GitHub Wiki and Markdown... similar to 
 
 The concept of the Github commits using Markdown for content, into a simple site structure in a GitHub Wiki really resonated.  Let GitHub provide the web serving/hosting, some minimal SEO, etc. I thought!  Yeah, now we're cookin'...
 
-<img src="assets/img/post-github-blogging/google-search-using-githug-for-blog.jpg" style="width: 100%;height: auto;max-width: 400px;" />
+<img src="/assets/img/post-github-blogging/google-search-using-githug-for-blog.jpg" style="width: 100%;height: auto;max-width: 400px;" />
 
 When researching that idea (and later learning of other limitations), I learned that GitHub hosts not only Repositories, but also websites for those Repositores.  And offers a free website for each user account -- yeah... _we landed on the moon_ is exactly what I was thinking at this point!
 
 After deep diviing into these other awesome blogs with great info. and GitHub's own tutorials:
 
-- https://github.com/stickfigure/blog/wiki/GitHub's-wiki-makes-a-pretty-decent-blogging-platform
-- https://jekyllrb.com/docs/github-pages/
-- https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
-- https://docs.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll
+- [https://github.com/stickfigure/blog/wiki/GitHub's-wiki-makes-a-pretty-decent-blogging-platform](https://github.com/stickfigure/blog/wiki/GitHub's-wiki-makes-a-pretty-decent-blogging-platform)
+- [https://jekyllrb.com/docs/github-pages/](https://jekyllrb.com/docs/github-pages/)
+- [https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/)
+- [https://docs.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll](https://docs.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll)
 
 ### I was Sold! 
 - Yes, I'd love to use a pre-made template (of which there are many minimal yet elegant options) like [**BeautifulJekyll**](https://beautifuljekyll.com/)
 - A build process that's already integrated into GitHub via [**Jekyll**](https://jekyllrb.com/)
 - Reasonable separation of content from presentation via **Markdown**
-- Super fast performance of a statically built site served from GitHub Pages.
+- Super fast performance of a statically built site served from **GitHub Pages**.
 - Your own domain name right out-of-the-box: **cajuncoding.github.io**
 - Oh Snap! You can even use your own custom domain (Apex or Subdomain)???
 -- I'm already using the awesome DNS services from [**CloudFlare**](https://www.cloudflare.com) for enterprise performance and reliability!
 
-But, I don't want to repeat the same info. as the above sites provide... I will say that the instructions provided by [**BeautifulJekyll**](https://beautifuljekyll.com/) are all you need to get up and running!
+But, I don't want to repeat the same info. that the above sites provide... I will just say that the excellent instructions provided by [**BeautifulJekyll**](https://beautifuljekyll.com/) are all you need to get up and running!
 
 **And in the next article, I'll outline the practical learning from all this -- the extremely simplified steps for setting up the custom domain with CloudFlare & GitHub Pages!**
