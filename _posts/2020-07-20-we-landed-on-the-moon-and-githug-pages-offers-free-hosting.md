@@ -66,6 +66,6 @@ After deep diviing into these other awesome blogs with great info. and GitHub's 
 - Oh Snap! You can even use your own custom domain (Apex or Subdomain)???
 -- I'm already using the awesome DNS services from [**CloudFlare**](https://www.cloudflare.com) for enterprise performance and reliability!
 
-But, I don't want to repeat the same info. that the above sites provide... I will just say that the excellent instructions provided by [**BeautifulJekyll**](https://beautifuljekyll.com/) are all you need to get up and running!
+But, I don't want to repeat the same info. that the above sites provide... I will just say that the excellent [Getting Started instructions provided by **BeautifulJekyll**](https://beautifuljekyll.com/getstarted/) are all you need to get up and running!
 
 **And in the next article, I'll outline the practical learning from all this -- the extremely simplified steps for setting up the custom domain with CloudFlare & GitHub Pages!**
