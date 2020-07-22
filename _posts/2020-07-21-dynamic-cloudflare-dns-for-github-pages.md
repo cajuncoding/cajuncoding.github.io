@@ -8,9 +8,9 @@ thumbnail-img: >-
   /assets/img/post-dynamic-cloudflare-dns-for-github-pages/cf-logo-v-rgb-edited-square.png
 share-img: >-
   /assets/img/post-dynamic-cloudflare-dns-for-github-pages/cf-logo-v-rgb-edited-square.png
-tags:
-  - architecture
-  - github
+css:
+  - "/assets/css-custom/cajuncoding.css"
+tags: [architecture, infrastructure, cloudflare, github]
 ---
 So, here's something practical that might be of interest if you have (or want) a domain custom domain (apex or sub-domain) to point to your GitHub Pages site.
 
