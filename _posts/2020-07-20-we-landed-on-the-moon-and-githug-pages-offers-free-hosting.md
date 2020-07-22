@@ -6,12 +6,6 @@ cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: /assets/img/crawfish-posing-crop-square-01.jpg
 share-img: /assets/img/crawfish-posing-crop-square-01.jpg
 tags: [musings, github, cloudflare]
-css:
-  - "/assets/css-custom/cajuncoding.css"
-ext-js:
-  - "https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"
-js:
-  - "/assets/js-custom/cajuncoding-init.js"
 published: true
 ---
 # We landed on the Moon! 
@@ -51,7 +45,7 @@ So then I started thinking about using a GitHub Wiki and Markdown... similar to 
 
 The concept of the Github commits using Markdown for content, into a simple site structure in a GitHub Wiki really resonated.  Let GitHub provide the web serving/hosting, some minimal SEO, etc. I thought!  Yeah, now we're cookin'...
 
-<img src="/assets/img/post-github-blogging/google-search-using-githug-for-blog.jpg" class="fullsize" data-zoomable />
+<img src="/assets/img/2020-07-20-we-landed-on-the-moon-and-githug-pages-offers-free-hosting/google-search-using-githug-for-blog.jpg" class="fullsize" data-zoomable />
 
 When researching that idea (and later learning of other limitations), I learned that GitHub hosts not only Repositories, but also websites for those Repositores.  And offers a free website for each user account -- yeah... _we landed on the moon_ is exactly what I was thinking at this point!
 
@@ -62,7 +56,7 @@ After deep diviing into these other awesome blogs with great info. and GitHub's 
 - [https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/](https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/)
 - [https://docs.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll](https://docs.github.com/en/github/working-with-github-pages/setting-up-a-github-pages-site-with-jekyll)
 
-### I was Sold! 
+### Ok, I'm Sold!
 - Yes, I'd love to use a pre-made template (of which there are many minimal yet elegant options) like [**BeautifulJekyll**](https://beautifuljekyll.com/)
 - A build process that's already integrated into GitHub via [**Jekyll**](https://jekyllrb.com/)
 - Reasonable separation of content from presentation via **Markdown**
