@@ -5,8 +5,13 @@ subtitle: err...GitHub Pages offers Free Hosting!
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: /assets/img/crawfish-posing-crop-square-01.jpg
 share-img: /assets/img/crawfish-posing-crop-square-01.jpg
-tags:
-  - musings
+tags: [musings, github, cloudflare]
+css:
+  - "/assets/css-custom/cajuncoding.css"
+ext-js:
+  - "https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"
+js:
+  - "/assets/js-custom/cajuncoding-init.js"
 published: true
 ---
 # We landed on the Moon! 
@@ -46,7 +51,7 @@ So then I started thinking about using a GitHub Wiki and Markdown... similar to 
 
 The concept of the Github commits using Markdown for content, into a simple site structure in a GitHub Wiki really resonated.  Let GitHub provide the web serving/hosting, some minimal SEO, etc. I thought!  Yeah, now we're cookin'...
 
-<img src="/assets/img/post-github-blogging/google-search-using-githug-for-blog.jpg" style="width: 100%;height: auto;max-width: 400px;" />
+<img src="/assets/img/post-github-blogging/google-search-using-githug-for-blog.jpg" class="fullsize" data-zoomable />
 
 When researching that idea (and later learning of other limitations), I learned that GitHub hosts not only Repositories, but also websites for those Repositores.  And offers a free website for each user account -- yeah... _we landed on the moon_ is exactly what I was thinking at this point!
 
