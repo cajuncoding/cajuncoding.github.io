@@ -1,0 +1,7 @@
+{
+    "pasteImage.showFilePathConfirmInputBox": true,
+    "pasteImage.basePath": "${projectRoot}",
+    "pasteImage.path": "${projectRoot}/assets/img/${currentFileNameWithoutExt}/",
+    "pasteImage.prefix": "../",
+    "pasteImage.insertPattern": "<img src=\"${imageFilePath} \" class=\"fullsize\" data-zoomable />"
+}
