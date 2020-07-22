@@ -12,7 +12,9 @@ published: true
 
 Err, I felt just like this when I recently followed an idea, that I had, down the **[rabbit hole](#rabbit-hole)** only to discvoer that GitHub Pages have existed forever (since 2008 which is forever in terms of technology)...
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-f_DPrSEOEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-f_DPrSEOEo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
   
 ## Ok let's start at the end...
@@ -45,7 +47,7 @@ So then I started thinking about using a GitHub Wiki and Markdown... similar to 
 
 The concept of the Github commits using Markdown for content, into a simple site structure in a GitHub Wiki really resonated.  Let GitHub provide the web serving/hosting, some minimal SEO, etc. I thought!  Yeah, now we're cookin'...
 
-<img src="/assets/img/2020-07-20-we-landed-on-the-moon-and-githug-pages-offers-free-hosting/google-search-using-githug-for-blog.jpg" class="fullsize" data-zoomable />
+<img src="../assets/img/2020-07-20-we-landed-on-the-moon-and-githug-pages-offers-free-hosting/google-search-using-githug-for-blog.jpg" class="fullsize" data-zoomable />
 
 When researching that idea (and later learning of other limitations), I learned that GitHub hosts not only Repositories, but also websites for those Repositores.  And offers a free website for each user account -- yeah... _we landed on the moon_ is exactly what I was thinking at this point!
 
