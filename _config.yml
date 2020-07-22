@@ -13,6 +13,7 @@ author: Brandon Bernard
 
 navbar-links:
   Resources:
+    - Tag Index: "/tags"
     - Photography (Flickr): "https://www.flickr.com/photos/77885066@N06/"
   #  - Beautiful Jekyll: "https://beautifuljekyll.com"
   #  - Learn markdown: "https://www.markdowntutorial.com/"
