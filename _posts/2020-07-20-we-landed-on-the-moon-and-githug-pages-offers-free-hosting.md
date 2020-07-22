@@ -66,11 +66,11 @@ After deep diviing into these other awesome blogs with great info. and GitHub's 
 - Yes, I'd love to use a pre-made template (of which there are many minimal yet elegant options) like [**BeautifulJekyll**](https://beautifuljekyll.com/)
 - A build process that's already integrated into GitHub via [**Jekyll**](https://jekyllrb.com/)
 - Reasonable separation of content from presentation via **Markdown**
-- Super fast performance of a statically built site served from **GitHub Pages**.
+- Super fast performance of a statically built site served from [**GitHub Pages**](https://pages.github.com/).
 - Your own domain name right out-of-the-box: **cajuncoding.github.io**
 - Oh Snap! You can even use your own custom domain (Apex or Subdomain)???
--- I'm already using the awesome DNS services from [**CloudFlare**](https://www.cloudflare.com) for enterprise performance and reliability!
+    - I'm already using the awesome DNS services from [**CloudFlare**](https://www.cloudflare.com) for enterprise performance and reliability!
 
 But, I don't want to repeat the same info. that the above sites provide... I will just say that the excellent [Getting Started instructions provided by **BeautifulJekyll**](https://beautifuljekyll.com/getstarted/) are all you need to get up and running!
 
-**And in the next article, I'll outline the practical learning from all this -- the extremely simplified steps for setting up the custom domain with CloudFlare & GitHub Pages!**
+**[And in the next article](https://cajuncoding.com/2020-07-21-dynamic-cloudflare-dns-for-github-pages/), I'll outline the practical learning from all this -- the extremely simplified steps for setting up the custom domain with CloudFlare & GitHub Pages!**
