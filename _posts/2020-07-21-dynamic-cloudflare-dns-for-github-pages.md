@@ -10,6 +10,10 @@ share-img: >-
   /assets/img/post-dynamic-cloudflare-dns-for-github-pages/cf-logo-v-rgb-edited-square.png
 css:
   - "/assets/css-custom/cajuncoding.css"
+ext-js:
+  - "https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.0.6/medium-zoom.min.js"
+js:
+  - "/assets/js-custom/cajuncoding-init.js"
 tags: [architecture, infrastructure, cloudflare, github]
 ---
 So, here's something practical that might be of interest if you have (or want) a domain custom domain (apex or sub-domain) to point to your GitHub Pages site.
