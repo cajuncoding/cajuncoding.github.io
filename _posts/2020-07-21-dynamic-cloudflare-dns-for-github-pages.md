@@ -34,7 +34,7 @@ I'll leave you to read the nitty gritty in that link, but for all-intents-and-pu
 
 That's it, one screeshot, Done! Our DNS setup in CloudFlare is now complete.  The final step is to setup GitHub to correctly server our content for our custom domain; basically tell GitHub Pages that it's ok to route our custom domain to our repo and support serving with a different host name.
 
-### Enabling the proper Domain handling on the Github side...
+### Enabling the proper Domain handling on the GitHub side...
 
 To allow serving our content via our custom domain, we do need to enable this on the GitHub side, but they make it just as easy here too. 
 
@@ -50,7 +50,7 @@ But their UI is super easy and takes care of this for us.  In your repo, navigat
 
 _Fyi, this part was also addressed in [Rick Pauloo's write-up above](https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/)_.
 
-**That's it, you now have a custom apex domain routed by Cloudflare to a site hosted in Github Pages -- both offerring enterprise performance and reliability!**
+**That's it, you now have a custom apex domain routed by Cloudflare to a site hosted in GitHub Pages -- both offerring enterprise performance and reliability!**
 
 NOTE: GitHub Pages will dynamically bind both the Apex domain _cajuncoding.com_ as well as the default web sub-domain of _www.cajuncoding.com_.  But no other subdomains will be supported.
 
