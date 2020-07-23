@@ -2,12 +2,12 @@
 published: true
 layout: post
 title: Configuring HassIO Ingress for Add-Ons with LetsEncrypt Docker
-subtitle: Enable support for HassIO Add-Ons in LetsEncrypt Docker (linuxserver letsencrypt)
+subtitle: >-
+  Enable support for HassIO Add-Ons in LetsEncrypt Docker (linuxserver
+  letsencrypt)
 cover-img: /assets/img/homeassistant-banner.png
-thumbnail-img: >-
-  /assets/img/homeassistant-large.png
-share-img: >-
-  /assets/img/homeassistant-large.png
+thumbnail-img: /assets/img/homeassistant-large.png
+share-img: /assets/img/homeassistant-large.png
 tags:
   - hassio
   - homeassistant
@@ -38,9 +38,13 @@ However, that sample was setup for the standard core HomeAssistant install and n
 
 That's when it finally clicked! I finally got my add-ons working by ensuring that websockets were fully enabled for this route in addition to the default HomeAssistant API route (provided in the default config of LetsEncrypt docker).
 
-By adding the following location handler/configuration to my Nginx proxy configuration (in addition to the other one for the default HomeAssistant websockets api route: `api/websockets`; just add this below the first in your configuration):
+By adding the following additional location handler/configuration to my Nginx proxy configuration we can safely and securely enable the websocket support needed.
 
-Note: For security & best practices (narrow scope), I added this section to specifically only handle the `hassio_ingress` route, as opposed to blindly allowing all requests at my root location to be upgraded as websockets (wildcard for any request to my HomeAssistant). This less secure wildcare solution was mentioned by some answers in the HomeAssistant forum, but I recommend against it.
+This is added below the other existing configuration for the default HomeAssistant websockets api route: `api/websockets`; just add this below the first in your configuration.
+
+You will need to update the IP address or domain name (e.g. dnsmasq) to ensure it correctly points to you HassIO instance on the line: `set $upstream_app <IP_OF_HASS>`
+
+Note: For security & best practices (narrow scope), I added this section to specifically only handle the `hassio_ingress` route, as opposed to blindly allowing all requests at my root location to be upgraded as websockets (wildcard for any request to my HomeAssistant); the less secure wildcare solution was mentioned by some answers in the HomeAssistant forum, but I recommend against it.
 
 ```
 # Duplicate websocket configuration specifically for HassIO add-ons (e.g. /api/hassio_ingress)
