@@ -1,14 +1,18 @@
 ---
 published: true
 layout: post
-title: CloudFlare dynamic DNS setup for GitHub Pages
+title: Cloudflare dynamic DNS setup for GitHub Pages
 subtitle: Using a CNAME record instead of traditional A record.
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: >-
   /assets/img/2020-07-21-dynamic-cloudflare-dns-for-github-pages/cf-logo-v-rgb-edited-square.png
 share-img: >-
   /assets/img/2020-07-21-dynamic-cloudflare-dns-for-github-pages/cf-logo-v-rgb-edited-square.png
-tags: [dns, infrastructure, cloudflare, github]
+tags:
+  - dns
+  - infrastructure
+  - cloudflare
+  - github
 ---
 So, here's something practical that might be of interest if you have (or want) a domain custom domain (apex or sub-domain) to point to your GitHub Pages site.
 
@@ -46,8 +50,8 @@ But their UI is super easy and takes care of this for us.  In your repo, navigat
 
 _Fyi, this part was also addressed in [Rick Pauloo's write-up above](https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/)_.
 
-**That's it, you now have a custom apex domain routed by CloudFlare to a site hosted in Github Pages -- both offerring enterprise performance and reliability!**
+**That's it, you now have a custom apex domain routed by Cloudflare to a site hosted in Github Pages -- both offerring enterprise performance and reliability!**
 
 NOTE: GitHub Pages will dynamically bind both the Apex domain _cajuncoding.com_ as well as the default web sub-domain of _www.cajuncoding.com_.  But no other subdomains will be supported.
 
-**I touch on how we can redirect other custom sub-domains such as _blog.cajuncoding.com_ using CloudFlare [in this next post](2020-07-22-dynamic-cloudflare-dns-subdomain-redirect).**
+**I touch on how we can redirect other custom sub-domains such as _blog.cajuncoding.com_ using Cloudflare [in this next post](/2020-07-22-dynamic-cloudflare-dns-subdomain-redirect).**
