@@ -42,7 +42,7 @@ By adding the following additional location handler/configuration to my Nginx pr
 
 This is added below the other existing configuration for the default HomeAssistant websockets api route: `api/websockets`; just add this below the first in your configuration.
 
-You will need to update the IP address or domain name (e.g. dnsmasq) to ensure it correctly points to you HassIO instance on the line: `set $upstream_app <IP_OF_HASS>`
+You will need to update the IP address or domain name (e.g. dnsmasq) to ensure it correctly points to your HassIO instance, on the line: `set $upstream_app <IP_OF_HASS>`
 
 Note: For security & best practices (narrow scope), I added this section to specifically only handle the `hassio_ingress` route, as opposed to blindly allowing all requests at my root location to be upgraded as websockets (wildcard for any request to my HomeAssistant); the less secure wildcare solution was mentioned by some answers in the HomeAssistant forum, but I recommend against it.
 
