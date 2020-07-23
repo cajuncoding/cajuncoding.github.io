@@ -5,7 +5,10 @@ subtitle: err...GitHub Pages offers Free Hosting!
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: /assets/img/crawfish-posing-crop-square-01.jpg
 share-img: /assets/img/crawfish-posing-crop-square-01.jpg
-tags: [musings, github, cloudflare]
+tags:
+  - musings
+  - github
+  - cloudflare
 published: true
 ---
 # We landed on the Moon! 
@@ -20,11 +23,11 @@ Err, I felt just like this when I recently followed an idea, that I had, down th
 ## Ok let's start at the end...
 Welcome to the new home of the _Geax Code_ blog... my channel for sharing musings &amp; ideas on code, business, technology, photography, the list goes on and on.... but mostly about Code!
 
-It's based on the **Beautiful Jekyll** theme, running on **Github Pages**, using **CloudFlare DNS**, and suports really simple pseudo-CMS behavior via **Prose.io**. 
+It's based on the **Beautiful Jekyll** theme, running on **Github Pages**, using **Cloudflare DNS**, and suports really simple pseudo-CMS behavior via **Prose.io**. 
 
 Most importantly, it's relatively painless -- _for a geek that is_ -- to setup. It's simple, functional, and efficient, and high performing!
 
-So in summary, it's amazing what we can accomplish these days with the combined power of open-source projects (thanks to all), and great services by great companies like CloudFlare & Microsoft (Github)!
+So in summary, it's amazing what we can accomplish these days with the combined power of open-source projects (thanks to all), and great services by great companies like Cloudflare & Microsoft (Github)!
 
 Now, I do pay for the domain [cajuncoding.com](http://cajuncoding.com), but other than that I'm able to share with the world using best-of-breed technologies for Free! 
 
@@ -43,7 +46,7 @@ But, at the root of it all I was looking for something simple! Something that wo
 
 So my mind quickly shifted away from the idea of managing an html site via Blob storage, etc. Managine a pure html site seemed like unnecessary work, and also violated core tenents I preach to my clients daily about keeping content separate from presentation.... but how could I do this more simply?
 
-So then I started thinking about using a GitHub Wiki and Markdown... similar to how [Atlassian Confluence](https://www.atlassian.com/software/confluence?&aceid=&adposition=&adgroup=99595999889&campaign=9518255230&creative=431806031492&device=c&keyword=confluence&matchtype=e&network=g&placement=&ds_kids=p51982324819&ds_e=GOOGLE&ds_eid=700000001542923&ds_e1=GOOGLE&gclid=Cj0KCQjwpNr4BRDYARIsAADIx9z84Mxz0ptsWI8Gh8eCH2SFuuKpbPubGJYdxivVQ_iXP3nq10WVWn8aAt0cEALw_wcB&gclsrc=aw.ds) helps us out with our clients... to focus on writing, less on all the other overhead of sharing it out.  
+So then I started thinking about using a Github Wiki and Markdown... similar to how [Atlassian Confluence](https://www.atlassian.com/software/confluence?&aceid=&adposition=&adgroup=99595999889&campaign=9518255230&creative=431806031492&device=c&keyword=confluence&matchtype=e&network=g&placement=&ds_kids=p51982324819&ds_e=GOOGLE&ds_eid=700000001542923&ds_e1=GOOGLE&gclid=Cj0KCQjwpNr4BRDYARIsAADIx9z84Mxz0ptsWI8Gh8eCH2SFuuKpbPubGJYdxivVQ_iXP3nq10WVWn8aAt0cEALw_wcB&gclsrc=aw.ds) helps us out with our clients... to focus on writing, less on all the other overhead of sharing it out.  
 
 The concept of the Github commits using Markdown for content, into a simple site structure in a GitHub Wiki really resonated.  Let GitHub provide the web serving/hosting, some minimal SEO, etc. I thought!  Yeah, now we're cookin'...
 
@@ -65,8 +68,8 @@ After deep diviing into these other awesome blogs with great info. and GitHub's 
 - Super fast performance of a statically built site served from [**GitHub Pages**](https://pages.github.com/).
 - Your own domain name right out-of-the-box: **cajuncoding.github.io**
 - Oh Snap! You can even use your own custom domain (Apex or Subdomain)???
-    - I'm already using the awesome DNS services from [**CloudFlare**](https://www.cloudflare.com) for enterprise performance and reliability!
+    - I'm already using the awesome DNS services from [**Cloudflare**](https://www.cloudflare.com) for enterprise performance and reliability!
 
 But, I don't want to repeat the same info. that the above sites provide... I will just say that the excellent [Getting Started instructions provided by **BeautifulJekyll**](https://beautifuljekyll.com/getstarted/) are all you need to get up and running!
 
-**[And in the next article](https://cajuncoding.com/2020-07-21-dynamic-cloudflare-dns-for-github-pages/), I'll outline the practical learning from all this -- the extremely simplified steps for setting up the custom domain with CloudFlare & GitHub Pages!**
+**[And in the next article](/2020-07-21-dynamic-cloudflare-dns-for-github-pages/), I'll outline the practical learning from all this -- the extremely simplified steps for setting up the custom domain with Cloudflare & GitHub Pages!**
