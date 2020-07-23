@@ -50,4 +50,4 @@ _Fyi, this part was also addressed in [Rick Pauloo's write-up above](https://ric
 
 NOTE: GitHub Pages will dynamically bind both the Apex domain _cajuncoding.com_ as well as the default web sub-domain of _www.cajuncoding.com_.  But no other subdomains will be supported.
 
-**I'll touch on how we can pretty easily redirect other custom sub-domains such as _blog.cajuncoding.com_ using CloudFlare in another post.**
+**I touch on how we can redirect other custom sub-domains such as _blog.cajuncoding.com_ using CloudFlare [in this next post](2020-07-22-dynamic-cloudflare-dns-subdomain-redirect).**
