@@ -11,8 +11,6 @@ tags:
   - cloudflare
 published: true
 ---
-# We landed on the Moon! 
-
 Err, I felt just like this when I recently followed an idea, that I had, down the **[rabbit hole](#rabbit-hole)** only to discvoer that GitHub Pages have existed forever (since 2008 which is forever in terms of technology)...
 
 <div class="center">
