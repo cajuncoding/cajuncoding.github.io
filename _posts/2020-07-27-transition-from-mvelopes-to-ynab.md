@@ -16,7 +16,7 @@ tags:
   - finances
   - budget
 ---
-I've been using Mvelopes as a budgeting and financial tracking system for many years! And, I'm a fan of the concept, but the actual software has been a hot-mess, pretty much since I joined. The old v4 Flash based UI is still in use today die to all the issues in v5; I mean, really? Flash and/or Silverlight UI's were soo 2008! And [Silverlight](https://theorem.co/verticals/silverlight-modernization) was already going the way of the [Dodo](https://en.wikipedia.org/wiki/Dodo) by 2015.
+I've been using Mvelopes as a budgeting and financial tracking system for many years! And, I'm a fan of the concept, but the actual software has been a hot-mess, pretty much since I joined. The old v4 Flash based UI is still in use today due to all the issues in v5; I mean, really? Flash and/or Silverlight UI's were soo 2008! And [Silverlight](https://theorem.co/verticals/silverlight-modernization) was already going the way of the [Dodo](https://en.wikipedia.org/wiki/Dodo) by 2015.
 
 But, I digress, Finicity did finally build **Mvelopes v5** as a pure Javascript (SPA) application. And I was truly excited.... **but truly let down!** 
 
