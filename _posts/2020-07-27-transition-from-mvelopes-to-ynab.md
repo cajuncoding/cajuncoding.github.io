@@ -3,17 +3,20 @@ published: true
 layout: post
 title: My migration from Mvelopes to YNAB!
 subtitle: >-
-  A Rant on my Love-Hate realationship with Mvelopes - hoping "You Need A Budget" (YNAB) can return my budgeting sanity!
+  A Rant on my Love-Hate realationship with Mvelopes - hoping "You Need A
+  Budget" (YNAB) can return my budgeting sanity!
 cover-img: /assets/img/crawfish-banner.jpg
-thumbnail-img: /assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelops-to-ynab-thumbnail.png
-share-img: /assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelops-to-ynab-thumbnail.png
+thumbnail-img: >-
+  /assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelops-to-ynab-thumbnail.png
+share-img: >-
+  /assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelops-to-ynab-thumbnail.png
 tags:
   - mvelopes
   - ynab
   - finances
   - budget
 ---
-I've been using Mvelopes as a budgeting and financial tracking system for many years! And, I'm a fan of the ocncept, but the actual software has been a hot-mess pretty much since I joined. From the old days of Flash based UI using Mvelopes v4 -- which was still in use as of Feb. 2018; I mean, really? Flash and/or Silverlight UI's were soo 2008! And [Silverlight](https://theorem.co/verticals/silverlight-modernization) was already going the way of the [Dodo](https://en.wikipedia.org/wiki/Dodo) by 2015.
+I've been using Mvelopes as a budgeting and financial tracking system for many years! And, I'm a fan of the concept, but the actual software has been a hot-mess, pretty much since I joined. The old v4 Flash based UI is still in use today die to all the issues in v5; I mean, really? Flash and/or Silverlight UI's were soo 2008! And [Silverlight](https://theorem.co/verticals/silverlight-modernization) was already going the way of the [Dodo](https://en.wikipedia.org/wiki/Dodo) by 2015.
 
 But, I digress, Finicity did finally build **Mvelopes v5** as a pure Javascript (SPA) application. And I was truly excited.... **but truly let down!** 
 
@@ -71,5 +74,3 @@ And that's the inspiration for this series of posts:
  - [Backing-up my Mvelopes *Monthly Funding Plan* data up (with some hackery)!](./2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv%20copy.md)
  - Backing-up my Mvelopes Transaction Data up!
  - Transitioning from Mvelopes to You Need a Budget (YNAB)!
-
-
