@@ -74,7 +74,7 @@ So, for a long time I didn't think there were many alternatives that met my key 
 So, there you have it, I'm inspired to leave Mvelopes and try something better . . . crossing my fingers that the something better is [YNAB](https://www.youneedabudget.com/).
 
 And that's the inspiration for this series of posts:
- - [My migration from Mvelopes to YNAB!](./2020-07-27-transition-from-mvelopes-to-ynab.md)
- - [Backing-up my Mvelopes *Monthly Funding Plan* data up (with some hackery)!](./2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv%20copy.md)
+ - [My migration from Mvelopes to YNAB!](./2020-07-27-transition-from-mvelopes-to-ynab)
+ - [Backing-up my Mvelopes *Monthly Funding Plan* data up (with some hackery)!](./2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv)
  - Backing-up my Mvelopes Transaction Data up!
  - Transitioning from Mvelopes to You Need a Budget (YNAB)!
