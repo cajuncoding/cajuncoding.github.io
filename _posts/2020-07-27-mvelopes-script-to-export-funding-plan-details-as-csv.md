@@ -3,7 +3,7 @@ published: true
 layout: post
 title: How to Export your Monthly Funding Plan details as CSV from the Mvelopes 5 UI
 subtitle: Addressing Mvelopes 5 issues with some JS hackery...
-cover-img: /assets/img/crawfish-banner.png
+cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: >-
   /assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelops-to-ynab-thumbnail.png
 share-img: >-
