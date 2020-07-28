@@ -51,15 +51,16 @@ For me, these are some of the core capabilities that a budgeting platform needs 
  - Provide direct importing of all transactions from linked accounts
    - *This needs to work consistently.  I don't mind troubleshooting 1 out of 5 times, but any more and I'm more annoyed and now already losing efficiency.*
  - Provide an easy & efficient way to allocate these transactions to my budget (e.g. help me finish, and don't annoy me while doing it)
-   - *Memory leaks that force me to refresh my browser to keep working disqualifiees this Mvelopes from being both easy and efficient.*
- - Allow me to control how many budget items and how granular I want to manage my budget
- - Help me track expenses and costs of a budget over time (e.g. Coffee Budget) so that I can look back on it retro-spectively.
-   - *This is extremely useful for reflecting on things like Vacation costs that we budget for individually*.
- - Help me pro-actively keep my costs in check; I need to be able to see quickly/easily anytime a budget item is at risk or over budget for a month.
-   - A tangential benefit here is also to quickly help me identify any risk/fraudulent/incorrect charges to any of my accounts
+   - *Memory leaks that force me to refresh my browser to keep working disqualifiees Mvelopes from being easy or efficient.*
+ - Allow me to control how many budget items and how granular I want to manage my budget.
+   - *Why so much scrollimg Mvelopes?*
+ - Help me track expenses and costs of a spicific budget item over time (e.g. Coffee Budget) so that I can look back on it retrospectively.
+   - *This is extremely useful for reflecting on things like Vacation costs that we budget for individually and want to reflect on later*.
+ - Help me pro-actively keep my costs in check; I need to be able to see, quickly/easily, anytime a budget item is at risk or over budget for a month.
+   - A tangential benefit/need here is also to quickly help me identify any risky/fraudulent/incorrect charges to any of my accounts.
      - *Because in today's world this has & will happen eventually.*
- - Allow me to search through all my transactions find random purchases for review.
- - And finally let me Export my transactions and budget deails.
+ - Allow me to search through all my transactions to efficiently find random purchases for review.
+ - And finally let me Export my transactions and budget details.
    - *Because everything should be backed-up, and I want to have a copy of my own data.*
 
 A system that empowers me to be productive with my budget, helps me pro-actively stay on track for long term savings goals, and makes the process tolerable (or maybe even enjoyable) is worth paying for!
