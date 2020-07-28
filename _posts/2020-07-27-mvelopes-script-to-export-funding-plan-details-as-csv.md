@@ -3,7 +3,7 @@ published: true
 layout: post
 title: How to Export your Monthly Funding Plan details as CSV from the Mvelopes 5 UI
 subtitle: Addressing Mvelopes 5 issues with some JS hackery...
-cover-img: /assets/img/homeassistant-banner.png
+cover-img: /assets/img/crawfish-banner.png
 thumbnail-img: >-
   /assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelops-to-ynab-thumbnail.png
 share-img: >-
@@ -14,32 +14,35 @@ tags:
   - budget
   - hackery
 ---
-One of the many-many frustrating issues with Mvelopes 5 budgeting platform has been how the Funding Plan screen is plagued with bugs...
+One of the many-many frustrating issues with the Mvelopes 5 budgeting platform has been how the Funding Plan screen is plagued with bugs and useability issues...
 
 <img src="../assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelops-to-ynab-thumbnail.png " class="fullsize" data-zoomable />
 
-## Monthly Funding Plan bugs:
+## Monthly Funding Plan bugs/issues:
 - The **Planning -> Income** panel has forgotten/lost my income amounts and payment dates on multiple occassions.
 - Making a change to any income amount (**Planning -> Income**) causes ALL related funding plan details, from that income, to be deleted without warning; move over to the Monthly Funding tab and lots of data is just gone.
 - There's no way to export or back-up this data in Mvelopes (nor in Mvelopes v4 either).
+- Theres soo much white-space waste, and the UI uses only part of the screen real estate available; causing incessant scrolling.
 
 ## What a waste of my valuable time...
-I mean isn't the purpose of paying for Mvelopes (or software in general) to minimize the headache and time I spend mucking with my budget info.?
+Isn't the purpose of paying for Mvelopes (or software in general) to minimize the headache and time I spend mucking with my budget info.?
 
 None-the-less, these issues have meant that I've spend inordinate amounts of time doing one or more of the following:
-1. Figuring out what I want my budget to be all-over-aagain
+1. Figuring out what I want my budget to be all-over-again.
 2. Or, if I only changed one income, I can re-enter what the newly zeroed-out funding plan items should be by matching the *Remaining Column* which does the math for me (Thanks, that's sorta helpful).
 3. Maintain all updates in duplication in a separate spreadsheet/file so I always have a backup...
    - *I admit that this just stopped getting done a while back...*
 
-## A better way to back-up the Mvelopes Montly Funding Plan details...
-You might be asking "Ok, how can I waste less on the Mvelopes Monthly Funding Plan time in the future?"
+## A better way to back-up the Mvelopes Monthly Funding Plan details...
+I should have been asking myself, "Ok, how can I waste less time on the Mvelopes Monthly Funding Plan in the future?"
 
-Well, for some reason the thought just occurred to me now that I'm going to try migrating over to YNAB. I realized that I really want an updated backup of this and the thought of crawing my full plan (which is probably unnecessarily detailed; but it works for me) made me cringe. Followed, quickly by the though of fixing this with some JS hackery! 
+Well, for some reason that thought just occurred to me now since I'm going to try migrating over to YNAB.
 
-And this blog is because just-maybe one other person might stumble upon this and find it helpful.
+I realized that I really want an updated backup of this and the thought of manually writing down my full plan (which is probably unnecessarily detailed; but it works for me) made me cringe. That's when the thought of fixing this with some JS hackery occurred! 
 
-So here's a simple JS script that will parse the screen and export the key data from the Mvelopes 5 monthly funding plan screen into CSV format that can be saved/imported into Excel:
+This blog post is because just-maybe one other person might stumble upon this and find it helpful.
+
+So here's a simple JS script that will parse the screen and export the key data from the Mvelopes 5 *Monthly Funding Plan* screen into CSV format that can be saved/imported into Excel:
 
 ```javacript
 var rows = document.querySelectorAll("form div.table-row");
