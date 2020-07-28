@@ -42,7 +42,7 @@ Finicity dropped the ball on v5 in more ways than I can count . . . occasionally
   - Ok it's a little better after the first 6-12 months or so, but it still works only 3 out of 5 times.
 - Did I mention they still don't have feature Parity yet as of July 2020 ([beta launched in Feb. 2018](https://www.mvelopes.com/2018/02/))?
 
-I say all of this because, I'm not alone in wanting to find a better alternative! But, I've struggled with the idea of starting over, though I think I've finally gotten over the friction of "oh man I've got to re-budget all over again". To the point that I'm now at, "oh man, if I can find a working solution and just inveest the time once, then maybe I can stop dreading (and start enjoying) my budget balancing days again!".
+I say all of this because, I'm not alone in wanting to find a better alternative! But, I've struggled with the idea of starting over, though I think I've finally gotten over the friction of "oh man I've got to re-budget all over again". To the point that I'm now at, "oh man, if I can find a working solution and just invest the time once, then maybe I can stop dreading (and start enjoying) my budget balancing days again!".
 
 ## So what's a good budgeting platform look like for me?
 I had casually investigated alternatives before, and of course [Mint](https://www.mint.com/) was always an option, but it never met my goals for a budgeting app because it didn't offer the proactive elements I want. Even though it's free, I would be happier with some of my own advanced Google Sheets/Excel spreadsheets for the same (*free*) price.  There are many other great blogs and videos comparing Mint to new options so I'll leave that to you to follow up on.
