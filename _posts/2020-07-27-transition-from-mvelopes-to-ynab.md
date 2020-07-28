@@ -71,7 +71,7 @@ So, for a long time I didn't think there were many alternatives that met my key 
 
 [The first search result here](https://support.youneedabudget.com/t/x147a0/my-transition-from-mvelopes-to-ynab), immediately gave me more hope than I'd had before.  And, after several days of research, pondering, and taking in the concepts (*mainly from Youtube*) I realized that YNAB has a solid following, and seems very interested in publishing really good and helpful information for it's users.  Plus, if you [watch Hannah](https://www.youtube.com/playlist?list=PLq0_N-XTl2yDWGTHHHYhfB_KumLx1zANh), it's pretty much impossible to not be convinced that YNAB might just change your life (she's really a great entertainer)!
 
-So, there you have it, I'm inspired to leave Mvelopes and try something better . . . (crossing my fingers that the something bettetr is [YNAB](https://www.youneedabudget.com/).
+So, there you have it, I'm inspired to leave Mvelopes and try something better . . . crossing my fingers that the something better is [YNAB](https://www.youneedabudget.com/).
 
 And that's the inspiration for this series of posts:
  - [My migration from Mvelopes to YNAB!](./2020-07-27-transition-from-mvelopes-to-ynab.md)
