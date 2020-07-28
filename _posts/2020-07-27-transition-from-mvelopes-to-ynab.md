@@ -31,6 +31,8 @@ Finicity dropped the ball on v5 in more ways than I can count . . . occasionally
     - *This one item drives me crazier than ANYTHING! Hardly any useful titles can be put into a paltry 24 character field!*
 - Mvelopes v5 is still missing TONS of features... its not even remotely close to having feature parity with v4.
   - *Not that most of v4 features worked all that well, but I was able to make it work for me.*
+- The UI initially looks nice but has far too much white-space waste and blocky areas that requires consistent and unnecessary scrolling -- some parts of the UI only use a fraction of the area available and just feels unnecessarily constrained.
+   - *I'm rocking a 30" monitor, I imagine that it's far less usable on smaller monitors.*
 - The Mobile App has limited use, and takes much too long to launch, login, scroll+click, to find the Mvelope of interest.
   - *There is just too much friciton in the user experience to serve the primary purpoase of helping you pro-actively know the status of a budget item prior to making a purchase (e.g. while waiting in line, or about to drive there in your car, etc.)*
 - They FORCED users to migrage with an aweful migration plan that broke more times than it worked
