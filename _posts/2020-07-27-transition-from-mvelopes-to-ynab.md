@@ -3,20 +3,20 @@ published: true
 layout: post
 title: My migration from Mvelopes to YNAB!
 subtitle: >-
-  A Rant on my Love-Hate realationship with Mvelopes - hoping "You Need A
+  A Rant on my Love-Hate relationship with Mvelopes - hoping "You Need A
   Budget" (YNAB) can return my budgeting sanity!
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: >-
-  /assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelops-to-ynab-thumbnail.png
+  /assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelopes-to-ynab-thumbnail.png
 share-img: >-
-  /assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelops-to-ynab-thumbnail.png
+  /assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelopes-to-ynab-thumbnail.png
 tags:
   - mvelopes
   - ynab
   - finances
   - budget
 ---
-I've been using Mvelopes as a budgeting and financial tracking system for many years! And, I'm a fan of the concept, but the actual software has been a hot-mess, pretty much since I joined. The old v4 Flash based UI is still in use today due to all the issues in v5; I mean, really? Flash and/or Silverlight UI's were soo 2008! And [Silverlight](https://theorem.co/verticals/silverlight-modernization) was already going the way of the [Dodo](https://en.wikipedia.org/wiki/Dodo) by 2015.
+I've been using Mvelopes as a budgeting and financial tracking system for many years! And, I'm a fan of the concept, but the actual software has been a hot-mess, pretty much since I joined. The old v4 Flash based UI is still in use today due to all the issues in v5; I mean, really? Flash and/or Silverlight UIs were soo 2008! And [Silverlight](https://theorem.co/verticals/silverlight-modernization) was already going the way of the [Dodo](https://en.wikipedia.org/wiki/Dodo) by 2015.
 
 But, I digress, Finicity did finally build **Mvelopes v5** as a pure Javascript (SPA) application. And I was truly excited.... **but truly let down!** 
 
@@ -24,20 +24,20 @@ But, I digress, Finicity did finally build **Mvelopes v5** as a pure Javascript 
 Finicity dropped the ball on v5 in more ways than I can count . . . occasionally I wonder how they stayed in business through this transition; but then I realize that the product team & development team definitely are not under-payed, they're probably compensated appropriately:
 - The app was slow and buggy; still plagued with memory leaks.
   - I, still to this day, have to hit F5 to reload after dragging/dropping 10+ transactions.
-  - The **Planning -> Income** panel has randomly forgotten or lost my income amounts and payment dates on multiple occassions.
+  - The **Planning -> Income** panel has randomly forgotten or lost my income amounts and payment dates on multiple occasions.
   - Making a change to any income amount (**Planning -> Income**) causes ALL related funding plan details, from that income, to be deleted without warning; click over to the Monthly Funding tab and lots of data is just gone.
     - *I've minimized my pain from this with some hackery that [I'll share here...](./2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv%20copy.md)*
-- What's that error about 24 characters? You won't let me type more than **24 characters** into any Title or Despcription field anymore?
+- What's that error about 24 characters? You won't let me type more than **24 characters** into any Title or Description field anymore?
     - *This one item drives me crazier than ANYTHING! Hardly any useful titles can be put into a paltry 24 character field!*
 - Mvelopes v5 is still missing TONS of features... its not even remotely close to having feature parity with v4.
   - *Not that most of v4 features worked all that well, but I was able to make it work for me.*
 - The UI initially looks nice but has far too much white-space waste and blocky areas that requires consistent and unnecessary scrolling -- some parts of the UI only use a fraction of the area available and just feels unnecessarily constrained.
    - *I'm rocking a 30" monitor, I imagine that it's far less usable on smaller monitors.*
 - The Mobile App has limited use, and takes much too long to launch, login, scroll+click, to find the Mvelope of interest.
-  - *There is just too much friciton in the user experience to serve the primary purpoase of helping you pro-actively know the status of a budget item prior to making a purchase (e.g. while waiting in line, or about to drive there in your car, etc.)*
-- They FORCED users to migrage with an aweful migration plan that broke more times than it worked.
-  - *Eventually I think they let people revert back . . . but umm, yeah all data changes simce the migration are lost -- not worth it for me.*
-- And, core features for importing transactions just never got better -- in today's world, two-factor authenticaion **is not optional**, and their support for it is abysmal.   
+  - *There is just too much friction in the user experience to serve the primary purpose of helping you pro-actively know the status of a budget item prior to making a purchase (e.g. while waiting in line, or about to drive there in your car, etc.)*
+- They FORCED users to migrate with an awful migration plan that broke more times than it worked.
+  - *Eventually I think they let people revert back . . . but umm, yeah all data changes since the migration are lost -- not worth it for me.*
+- And, core features for importing transactions just never got better -- in today's world, two-factor authentication **is not optional**, and their support for it is abysmal.   
   - For my own accounts it fails to import transactions about 4 out of 5 times.
   - Ok it's a little better after the first 6-12 months or so, but it still works only 3 out of 5 times.
 - Did I mention they still don't have feature Parity yet as of July 2020 ([beta launched in Feb. 2018](https://www.mvelopes.com/2018/02/))?
@@ -45,7 +45,7 @@ Finicity dropped the ball on v5 in more ways than I can count . . . occasionally
 I say all of this because, I'm not alone in wanting to find a better alternative! But, I've struggled with the idea of starting over, though I think I've finally gotten over the friction of "oh man I've got to re-budget all over again". To the point that I'm now at, "oh man, if I can find a working solution and just invest the time once, then maybe I can stop dreading (and start enjoying) my budget balancing days again!"
 
 ## So what's a good budgeting platform look like for me?
-I had casually investigated alternatives before, and of course [Mint](https://www.mint.com/) was always an option, but it never met my goals for a budgeting app because it didn't offer the pro-active elements that make a budgeting platform truly caluable. Even though it's free, I would be just as happy with some of my own advanced Google Sheets/Excel spreadsheets for the same (*free*) price. There are many other great blogs and videos comparing **Mint** to various other budgeting platform  options, so I'll leave that to you to follow up on.
+I had casually investigated alternatives before, and of course [Mint](https://www.mint.com/) was always an option, but it never met my goals for a budgeting app because it didn't offer the pro-active elements that make a budgeting platform truly valuable. Even though it's free, I would be just as happy with some of my own advanced Google Sheets/Excel spreadsheets for the same (*free*) price. There are many other great blogs and videos comparing **Mint** to various other budgeting platform  options, so I'll leave that to you to follow up on.
 
 For me, these are some of the core capabilities that a budgeting platform needs to provide for me, and I'm happy and willing to pay for it:
  - Provide direct importing of all transactions from linked accounts

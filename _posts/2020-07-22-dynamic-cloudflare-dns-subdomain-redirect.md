@@ -29,7 +29,7 @@ So a user could browse to this post using either of these urls and arrive where 
 - [https://cajuncoding.com/*](https://cajuncoding.com/2020-07-22-dynamic-cloudflare-dns-subdomain-redirect)
 - [https://blog.cajuncoding.com/*](https://cajuncoding.com/2020-07-22-dynamic-cloudflare-dns-subdomain-redirect)
 
-This is done by matching all requests for _blog.cajuncoding.com_, using a wildcard **/*** for the remaining part of the path. Then we use the variable replacement feature using **$1** (e.g. backreference to the wildcard capture) to ensure that the target/destination route still contains the full path, of the original request.  We also want to be protocol agnostic, so we match any incoming protocal (by not including it), and ensure that the destination is using **https**; this is helpful in my case because I already have Cloudflare enforcing _https_ so this saves any additional potential redirections from _http_ to _https_.
+This is done by matching all requests for _blog.cajuncoding.com_, using a wildcard **/*** for the remaining part of the path. Then we use the variable replacement feature using **$1** (e.g. back-reference to the wildcard capture) to ensure that the target/destination route still contains the full path, of the original request.  We also want to be protocol agnostic, so we match any incoming protocol (by not including it), and ensure that the destination is using **https**; this is helpful in my case because I already have Cloudflare enforcing _https_ so this saves any additional potential redirection from _http_ to _https_.
 
 ### Page Rule Patterns
 So the Matching Pattern is: `blog.cajuncoding.com/*`
@@ -47,6 +47,6 @@ The reason that I have to redirect and can't use this as the main domain is rela
 
 Since I'm using GitHub Pages to power my main site I need to redirect all traffic to the correct domain for GitHub Pages to understand and handle the requests -- of which it will only support my apex name and the default subdomain binding for _www_. 
   
-As documented in [GitHub docs here](https://docs.github.com/en/github/working-with-github-pages/troubleshooting-custom-domains-and-github-pages), I'm following thier direction:
+As documented in [GitHub docs here](https://docs.github.com/en/github/working-with-github-pages/troubleshooting-custom-domains-and-github-pages), I'm following their direction:
 
 <img src="../assets/img/2020-07-22-dynamic-cloudflare-dns-subdomain-redirect/github-cname-limits.png " class="fullsize" data-zoomable />

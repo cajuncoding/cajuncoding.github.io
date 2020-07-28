@@ -3,5 +3,17 @@
     "pasteImage.basePath": "${projectRoot}",
     "pasteImage.path": "${projectRoot}/assets/img/${currentFileNameWithoutExt}/",
     "pasteImage.prefix": "../",
-    "pasteImage.insertPattern": "<img src=\"${imageFilePath} \" class=\"fullsize\" data-zoomable />"
+    "pasteImage.insertPattern": "<img src=\"${imageFilePath} \" class=\"fullsize\" data-zoomable />",
+    "cSpell.words": [
+        "CNAME",
+        "Configurator",
+        "Finicity",
+        "Hass",
+        "Pauloo's",
+        "fullsize",
+        "letsencrypt",
+        "linuxserver",
+        "proto",
+        "zoomable"
+    ]
 }

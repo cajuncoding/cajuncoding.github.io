@@ -27,7 +27,7 @@ I was having a similar issue as those in the discussion on the HassIO issue here
 And, also similar question posted in the HomeAssistant forum here:  
 [https://community.home-assistant.io/t/unable-to-connect-with-nginx-reverse-proxy/14875](https://community.home-assistant.io/t/unable-to-connect-with-nginx-reverse-proxy/14875)
 
-However from tips on the HomeAssistant forum as well as the issue (above) I realized that if I access directly via IP address on my local network then the add-ons suprisingly worked. The developer tools in Chrome were no longer showing the web-socket errors...  So finally I had a clue that it was in fact related to my routing and reverse-proxy setup!
+However from tips on the HomeAssistant forum as well as the issue (above) I realized that if I access directly via IP address on my local network then the add-ons surprisingly worked. The developer tools in Chrome were no longer showing the web-socket errors...  So finally I had a clue that it was in fact related to my routing and reverse-proxy setup!
 
 My particular issues were with the **Terminal** add-on & the **Visual Studio Code** add-on which I could not get to work at all; so I ended up just un-installing them. But, I'm sure the root cause to many of these are all the same issue related to HassIO and reverse proxy configuration.
 
@@ -44,7 +44,7 @@ This is added below the other existing configuration for the default HomeAssista
 
 You will need to update the IP address or domain name (e.g. dnsmasq) to ensure it correctly points to your HassIO instance, on the line: `set $upstream_app <IP_OF_HASS>`
 
-Note: For security & best practices (narrow scope), I added this section to specifically only handle the `hassio_ingress` route, as opposed to blindly allowing all requests at my root location to be upgraded as websockets (wildcard for any request to my HomeAssistant); the less secure wildcare solution was mentioned by some answers in the HomeAssistant forum, but I recommend against it.
+Note: For security & best practices (narrow scope), I added this section to specifically only handle the `hassio_ingress` route, as opposed to blindly allowing all requests at my root location to be upgraded as websockets (wildcard for any request to my HomeAssistant); the less secure wildcard solution was mentioned by some answers in the HomeAssistant forum, but I recommend against it.
 
 ```
 # Duplicate websocket configuration specifically for HassIO add-ons (e.g. /api/hassio_ingress)
