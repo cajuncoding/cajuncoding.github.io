@@ -21,21 +21,21 @@ I've been using Mvelopes as a budgeting and financial tracking system for many y
 But, I digress, Finicity did finally build **Mvelopes v5** as a pure Javascript (SPA) application. And I was truly excited.... **but truly let down!** 
 
 ## Mvelopes v5 has been such a let-down:
-Finicity dropped the ball v5 in more ways than I can count . . . occasionally I wonder how they stayed in business through this transition; but then I realize that the product team & development team definitely are not under-payed, they're probably compensated appropriately:
+Finicity dropped the ball on v5 in more ways than I can count . . . occasionally I wonder how they stayed in business through this transition; but then I realize that the product team & development team definitely are not under-payed, they're probably compensated appropriately:
 - The app was slow and buggy; still plagued with memory leaks.
   - I, still to this day, have to hit F5 to reload after dragging/dropping 10+ transactions.
-  - The **Planning -> Income** panel has forgotten/lost my income amounts and payment dates on multiple occassions.
-  - Making a change to any income amount (**Planning -> Income**) causes ALL related funding plan details, from that income, to be deleted without warning; move over to the Monthly Funding tab and lots of data is just gone.
-    - *I've minimized my pain from this some hackery that [I'll share here...](./2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv%20copy.md)*
-  - What'S that error about 24 characters? You won't let me type more than **24 characters** into any Title or Despcription field anymore?
+  - The **Planning -> Income** panel has randomly forgotten or lost my income amounts and payment dates on multiple occassions.
+  - Making a change to any income amount (**Planning -> Income**) causes ALL related funding plan details, from that income, to be deleted without warning; click over to the Monthly Funding tab and lots of data is just gone.
+    - *I've minimized my pain from this with some hackery that [I'll share here...](./2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv%20copy.md)*
+  - What's that error about 24 characters? You won't let me type more than **24 characters** into any Title or Despcription field anymore?
     - *This one item drives me crazier than ANYTHING! Hardly any useful titles can be put into a paltry 24 character field!*
-- Mvelopes v5 is still missing TONS of features... not even remotely close to feature parity with v4.
-  - *Not that most of v4 features even worked all that well, but I was able to make it work for me.*
+- Mvelopes v5 is still missing TONS of features... its not even remotely close to having feature parity with v4.
+  - *Not that most of v4 features worked all that well, but I was able to make it work for me.*
 - The Mobile App has limited use, and takes much too long to launch, login, scroll+click, to find the Mvelope of interest.
-  - *Just too much friciton in the user experience to serve the primary purpoase of helping you pro-actively know the status of a budget item prior to making a purchase (think while waiting in line, or about to drive there in your car, etc.)*
+  - *There is just too much friciton in the user experience to serve the primary purpoase of helping you pro-actively know the status of a budget item prior to making a purchase (e.g. while waiting in line, or about to drive there in your car, etc.)*
 - They FORCED users to migrage with an aweful migration plan that broke more times than it worked
-  - *Eventually I think they let people revert back . . . but umm, yeah all data changes so you -- not worth it for me.*
-- And, core features for importing transactions just never got better -- in today's world two-factor authenticaion isn't optional, and their support for it is abysmal. For my own accounts they fail to import transactiosn about 4 out of 5 times
+  - *Eventually I think they let people revert back . . . but umm, yeah all data changes simce the migration are lost -- not worth it for me.*
+- And, core features for importing transactions just never got better -- in today's world, two-factor authenticaion **is not optional**, and their support for it is abysmal. For my own accounts they fail to import transactions about 4 out of 5 times
   - Ok it's a little better after the first 6-12 months or so, but it still works only 3 out of 5 times.
 - Did I mention they still don't have feature Parity yet as of July 2020 ([beta launched in Feb. 2018](https://www.mvelopes.com/2018/02/))?
 
