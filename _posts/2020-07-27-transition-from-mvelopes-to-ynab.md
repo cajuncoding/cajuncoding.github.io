@@ -27,7 +27,7 @@ Finicity dropped the ball on v5 in more ways than I can count . . . occasionally
   - The **Planning -> Income** panel has randomly forgotten or lost my income amounts and payment dates on multiple occassions.
   - Making a change to any income amount (**Planning -> Income**) causes ALL related funding plan details, from that income, to be deleted without warning; click over to the Monthly Funding tab and lots of data is just gone.
     - *I've minimized my pain from this with some hackery that [I'll share here...](./2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv%20copy.md)*
-  - What's that error about 24 characters? You won't let me type more than **24 characters** into any Title or Despcription field anymore?
+- What's that error about 24 characters? You won't let me type more than **24 characters** into any Title or Despcription field anymore?
     - *This one item drives me crazier than ANYTHING! Hardly any useful titles can be put into a paltry 24 character field!*
 - Mvelopes v5 is still missing TONS of features... its not even remotely close to having feature parity with v4.
   - *Not that most of v4 features worked all that well, but I was able to make it work for me.*
