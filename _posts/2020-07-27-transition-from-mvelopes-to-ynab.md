@@ -35,9 +35,10 @@ Finicity dropped the ball on v5 in more ways than I can count . . . occasionally
    - *I'm rocking a 30" monitor, I imagine that it's far less usable on smaller monitors.*
 - The Mobile App has limited use, and takes much too long to launch, login, scroll+click, to find the Mvelope of interest.
   - *There is just too much friciton in the user experience to serve the primary purpoase of helping you pro-actively know the status of a budget item prior to making a purchase (e.g. while waiting in line, or about to drive there in your car, etc.)*
-- They FORCED users to migrage with an aweful migration plan that broke more times than it worked
+- They FORCED users to migrage with an aweful migration plan that broke more times than it worked.
   - *Eventually I think they let people revert back . . . but umm, yeah all data changes simce the migration are lost -- not worth it for me.*
-- And, core features for importing transactions just never got better -- in today's world, two-factor authenticaion **is not optional**, and their support for it is abysmal. For my own accounts they fail to import transactions about 4 out of 5 times
+- And, core features for importing transactions just never got better -- in today's world, two-factor authenticaion **is not optional**, and their support for it is abysmal.   
+  - For my own accounts it fails to import transactions about 4 out of 5 times.
   - Ok it's a little better after the first 6-12 months or so, but it still works only 3 out of 5 times.
 - Did I mention they still don't have feature Parity yet as of July 2020 ([beta launched in Feb. 2018](https://www.mvelopes.com/2018/02/))?
 
