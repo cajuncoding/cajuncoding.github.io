@@ -5,9 +5,9 @@ title: Netwontsoft.Json dependency conflicts with Azure Functions (v2)
 subtitle: Why is this even a problem? Well, here's a little glance under the hood...
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: >-
-  /assets/img/2020-07-21-dynamic-cloudflare-dns-for-github-pages/azure-fn-logo-raster.png
+  /assets/img/azure-fn-logo-raster.png
 share-img: >-
-  /assets/img/2020-07-21-dynamic-cloudflare-dns-for-github-pages/azure-fn-logo-raster.png
+  /assets/img/azure-fn-logo-raster.png
 tags:
   - azure-functions
   - serverless
