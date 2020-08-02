@@ -16,13 +16,13 @@ tags:
 ---
 So, here's something practical that might be of interest if you have (or want) a domain custom domain (apex or sub-domain) to point to your GitHub Pages site.
 
-In my last post, I walked through the rabbit hole of research and humble learning I had about some awesome stuff htat has been around since 2008... GitHub Pages and Jekyll site building.
+In my last post, I walked through the rabbit hole of research and humble learning I had about some awesome stuff that has been around since 2008... GitHub Pages and Jekyll site building.
 
 But, I didn't offer much of a practical reason to even read the article... as it was mostly just an account of my own stumbling into knowledge.  But stumble & learn I did!
 
 But there was a simple practical element about CloudFlare that's def. worth sharing.
 
-There's several good blogs out there that walk you through setting up the DNS, for a custom domain name to point to a Githug Pages site, the traditional way using an **A** record (apex domain) pointing to specific IP addresses. I personally got a lot of value from [Rick Pauloo's great write-up here](https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/) for this exact process. But it uses the static documented IP addresses and creates **A** records within your DNS. 
+There's several good blogs out there that walk you through setting up the DNS, for a custom domain name to point to a Github Pages site, the traditional way using an **A** record (apex domain) pointing to specific IP addresses. I personally got a lot of value from [Rick Pauloo's great write-up here](https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/) for this exact process. But it uses the static documented IP addresses and creates **A** records within your DNS. 
 
 And GitHub documentation states that their IP addresses may change from time to time, and they provide an API to return the latest IP addresses . . . I'm not 100% if this is a real risk for GitHub pages also (as it's hosted under different domain at Github.io), but the point is that managing IP address changes isn't as simple as I'd like... and can be completely eliminated because **CloudFlare has made this easier than ever.**
 
@@ -32,7 +32,7 @@ I'll leave you to read the nitty gritty in that link, but for all-intents-and-pu
 
 <img src="../assets/img/2020-07-21-dynamic-cloudflare-dns-for-github-pages/setting-up-cloudflare-apex-domain-dns.jpg" class="fullsize" data-zoomable />
 
-That's it, one screeshot, Done! Our DNS setup in CloudFlare is now complete.  The final step is to setup GitHub to correctly server our content for our custom domain; basically tell GitHub Pages that it's ok to route our custom domain to our repo and support serving with a different host name.
+That's it, one screenshot, Done! Our DNS setup in CloudFlare is now complete.  The final step is to setup GitHub to correctly server our content for our custom domain; basically tell GitHub Pages that it's ok to route our custom domain to our repo and support serving with a different host name.
 
 ### Enabling the proper Domain handling on the GitHub side...
 
@@ -50,7 +50,7 @@ But their UI is super easy and takes care of this for us.  In your repo, navigat
 
 _Fyi, this part was also addressed in [Rick Pauloo's write-up above](https://richpauloo.github.io/2019-11-17-Linking-a-Custom-Domain-to-Github-Pages/)_.
 
-**That's it, you now have a custom apex domain routed by Cloudflare to a site hosted in GitHub Pages -- both offerring enterprise performance and reliability!**
+**That's it, you now have a custom apex domain routed by Cloudflare to a site hosted in GitHub Pages -- both offering enterprise performance and reliability!**
 
 NOTE: GitHub Pages will dynamically bind both the Apex domain _cajuncoding.com_ as well as the default web sub-domain of _www.cajuncoding.com_.  But no other subdomains will be supported.
 
