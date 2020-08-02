@@ -1,13 +1,13 @@
 ---
 published: true
 layout: post
-title: Netwontsoft.Json conflicts with Azure Functions (v2)
-subtitle: Another reason why understanding how .Net (or any Language)d works under the hood is actually pretty important.
+title: Netwontsoft.Json dependency conflicts with Azure Functions (v2)
+subtitle: Why is this even a problem? Well, here's a little glance under the hood...
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: >-
-  /assets/img/2020-08-01-azure-functions-newtonsoft-json-conflict/assets/img/2020-07-21-dynamic-cloudflare-dns-for-github-pages/azure-fn-logo-raster.png
+  /assets/img/2020-07-21-dynamic-cloudflare-dns-for-github-pages/azure-fn-logo-raster.png
 share-img: >-
-  /assets/img/2020-08-01-azure-functions-newtonsoft-json-conflict/assets/img/2020-07-21-dynamic-cloudflare-dns-for-github-pages/azure-fn-logo-raster.png
+  /assets/img/2020-07-21-dynamic-cloudflare-dns-for-github-pages/azure-fn-logo-raster.png
 tags:
   - azure-functions
   - serverless
@@ -80,7 +80,7 @@ Well, I spent all this time doing research with some Google-Fu...but I didn't re
 But, what does that really mean?  Well, there is some additional documentation hidden in plain sight, but oh-so easily overlooked in the [Readme for Azure Functions on Github right here](https://github.com/Azure/azure-functions-vs-build-sdk#q-i-need-a-different-newtonsoftjson-version-what-do-i-do)!
 
 For posterity, I'm capturing the current Q&A on Json in this thumbnail:
- - <img src="../assets/img/2020-08-01-azure-functions-newtonsoft-json-conflict/azure-fn-qa-capture-browser-window.png " class="thumbnail" data-zoomable />
+> <img src="../assets/img/2020-08-01-azure-functions-newtonsoft-json-conflict/azure-fn-qa-capture-browser-window.png " class="thumbnail" data-zoomable />
 
 So applying that (incredibly easy solution), all we need to really do is add a direct reference to our primary project -- the one that is using the Azure Functions SDK -- then things do start to get a lot better!  Not perfect (more on that in a sec.) but much better:
 
@@ -124,24 +124,27 @@ Both the [FAQ here](https://github.com/Azure/azure-functions-vs-build-sdk#q-why-
 
 Our application will be running with the expected version of **Newtonsoft.Json v12.0.1**, but the Azure Functions Runtime on the server may not (*because it appears to run in it's own process or AssemblyLoadContext before communicating with our code*)! 
 
-That's why this dependency constraint existed in the first place and it really makes sense once you understand the fundamentals.  But we didn't eliminate the issue of multiple versions, we just enabled our application to resolve our version so ti could run.
+That's why this dependency constraint existed in the first place and it really makes sense once you understand the fundamentals.  But we didn't eliminate the issue of multiple versions, we just enabled our application to resolve our version so that it could run.
 
 There are still interaction points with the core Azure Function runtime where we must avoid sharing classes because they will not be compatible (per Assembly class identification).  The app will compile because of the late-binding, but these exceptions/errors will occur at runtime!
 
-This is most likely to occur if you are using core Newtonsoft.Json classes like JObject, or JToken as a primary means of passing data into and out of the Azure Functions.  You likely would be doing this through variable binding, but could also be through other SDK method parameters, etc.  As the FAQ shows, here's an example:
-<img src="../assets/img/2020-08-01-azure-functions-newtonsoft-json-conflict/azure-fn-faq-object-binding-example.png " class="fullsize" data-zoomable />
+This is most likely to occur if you are using core Newtonsoft.Json classes like JObject, or JToken as a primary means of passing data into and out of the Azure Functions (e.g. as DTO). You likely would be doing this through variable binding, but could also be through other SDK method parameters, etc.  As the FAQ shows, here's an example:
+> <img src="../assets/img/2020-08-01-azure-functions-newtonsoft-json-conflict/azure-fn-faq-jobject-binding-example.png " class="medium center" data-zoomable />
 
-Notice the JObject class is used as the class type for the Queue binding.  This is instructing hte SDK runtime to use that class type for dynamic (late-binding) de-serialization of the data in the Queue that is being linked to. When this JObject is created it will be from v11.0.1 as determined by the Azure Function runtime, but when passed into your function your code will execute with v12.0.1 (thankfully we fixed that), and an exception will occur immediately!
+Notice the JObject class is used as the class type for the queue binding. This is instructing the Azure Functions runtime to use that class type for dynamic (late-binding) de-serialization of the data from the Queue that will trigger this Azure Function. When this JObject is created it will be from v11.0.1 (*Newtonsoft.Json*) as determined by the Azure Function runtime, but when passed into your function your code will execute with v12.0.1 (*because we've now fixed that*), and **an exception will occur immediately!**
 
 As stated in the FAQ:
 > That jObject instance will be fulfilled by the runtime version of JObject. 
 > If there is a version mismatch, the runtime will not be able to give you the version of JObject you are using from your custom Newtonsoft.Json version.
 
 ### So how to avoid this Gotcha?
-To avoid this gotcha is pretty easy (and in my opinion is just generally a better practice), always use your own classes and/or primitive values (e.g. Json String) for inter-process communication. If you have data going to/from a Queue then you can still use Json serialization, but the binding should de-serialize into your own Class and you won't have any issues.  Alternatively you could just take the value in as a serialized string (Json) and quickly deserialize yourself.... 
+To avoid this gotcha is pretty easy (and in my opinion is just generally a better practice), always use your own classes and/or primitive values (e.g. Json String) for integration (or inter-process) communication. 
+
+If you have data going to/from a Queue then you can still use Json serialization, but the binding should de-serialize into your own class, and you won't have any issues.  Alternatively you could just take the data/payload in as a serialized string (Json) and quickly deserialize yourself.... 
 
 In our case this was a non-issue, because we always use our own [DTO Classes](https://en.wikipedia.org/wiki/Data_transfer_object).
 
+Here's a quick snippet of what the sample from the FAQ would be with your own DTO class named *HelloQueuePayload*:
 ```csharp
 [FunctionName("hello")]
 public static async Task ProcessQueue([QueueTrigger] HelloQueuePayload helloQueuePayload)
@@ -150,8 +153,10 @@ public static async Task ProcessQueue([QueueTrigger] HelloQueuePayload helloQueu
 }
 
 ```
-Or (slightly less recommended but for the most part, ok):
-```
+
+Or here's an example of taking in a serialized string as the payload; which is ever-so-slightly less recommended, but for really still perfectly fine if you implement validation):
+
+```csharp
 [FunctionName("hello")]
 public static async Task ProcessQueue([QueueTrigger] String helloQueuePayloadText)
 {
