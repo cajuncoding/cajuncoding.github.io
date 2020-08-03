@@ -22,7 +22,9 @@ Feel free to [jump down to the resolution](#resolution), but I think it's also r
 ## This is a pretty common issue
 First, if you're not familiar with some details of Azure Functions, here's a great post by [Hari Haran to start with](https://medium.com/@hharan618/common-issues-while-development-of-azure-functions-76b08299af58)!
 
-The Newtonsoft.Json dependency conflicts are also talked about in-depth on various Github issues [here](https://github.com/Azure/azure-functions-vs-build-sdk/issues/304), and [here](https://github.com/Azure/azure-functions-host/issues/4049), and [here](https://github.com/Azure/Azure-Functions/issues/1079), etc.
+The Newtonsoft.Json dependency conflicts are also talked about in-depth on various Github issues [here](https://github.com/Azure/azure-functions-vs-build-sdk/issues/304), and [here](https://github.com/Azure/azure-functions-host/issues/4049), and [here](https://github.com/Azure/Azure-Functions/issues/1079), and [here](https://github.com/Azure/azure-functions-vs-build-sdk/issues/330), etc. 
+
+Oh, and some good info. has been updated in Stack Overflow [here](https://stackoverflow.com/questions/46073765/version-conflict-caused-by-microsoft-net-sdk-functions/46074367)...
 
 ## Our issue
 We encountered the Newtonsoft.Json conflict in our Azure Functions project for background processing (another series to come later) after adding a new feature to download data from Google Ads service using their API library. The devs pulled in the latest Google Ads API library and went to work. Once a bunch of code was written and unit-tested they integrated into the main Azure Functions project to start end-to-end testing and immediately encountered Newtonsoft.Json dependency conflicts!
@@ -110,6 +112,11 @@ Warning	NU1608	Detected package version outside of dependency constraint: Micros
 ```
 
 <img src="../assets/img/2020-08-01-azure-functions-newtonsoft-json-conflict/newtonsoft-json-dependency-conflict-warning.png " class="fullsize center" data-zoomable />
+
+#### Did Nuget say something about rolling back the update to your Azure Functions Project?
+IF you have an issue adding the explicit reference; perhaps you see a message saying that it rolls back your change, you should def. try the following:
+1. First manually add the reference to the CS Project file (as noted above), and then run a Clean followed by a build.  This worked for me!
+2. If you continue to have rollback issues, you can try the lower level steps outlined by [Simon Vane in his commonts on the Github issue here](https://github.com/Azure/azure-functions-vs-build-sdk/issues/330#issuecomment-562480035).
 
 ## We are ok now!
 
