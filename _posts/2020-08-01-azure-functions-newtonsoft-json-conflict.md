@@ -2,16 +2,14 @@
 published: true
 layout: post
 title: Netwontsoft.Json dependency conflicts with Azure Functions (v2)
-subtitle: Why is this even a problem? Well, here's a little glance under the hood...
+subtitle: 'Why is this even a problem? Well, here''s a little glance under the hood...'
 cover-img: /assets/img/crawfish-banner.jpg
-thumbnail-img: >-
-  /assets/img/azure-fn-logo-raster.png
-share-img: >-
-  /assets/img/azure-fn-logo-raster.png
+thumbnail-img: /assets/img/azure-fn-logo-raster.png
+share-img: /assets/img/azure-fn-logo-raster.png
 tags:
   - azure-functions
   - serverless
-  - c#
+  - 'c#'
   - .net
   - under-the-hood
 ---
@@ -73,16 +71,16 @@ There are some pretty clever workarounds to implement a form of binding redirect
 <a name="resolution"></a>
 ## So, what's the real resolution?
 
-Well, I spent all this time doing research with some Google-Fu...but I didn't really look closely enough at the error that Visual Studio was showing.  As it turns out the error is telling us what we can do, but it's just not super clear. Microsoft has added in the ability to mostly account for this into the compiler (MSBuild Task) and the error does explain it...sorta:  
+Well, I spent all this time doing research with some Google-Fu...but I didn't really look closely enough at the error that Visual Studio was showing. As it turns out the error is telling us what we can do, but it's just not super clear. Microsoft has added in the ability to mostly account for this into the compiler (MSBuild Task) and the error does explain it...sorta:  
 
 `Install/reference Newtonsoft.Json 12.0.1 directly to project <YOUR_PROJECT_NAME_HERE>`
 
-But, what does that really mean?  Well, there is some additional documentation hidden in plain sight, but oh-so easily overlooked in the [Readme for Azure Functions on Github right here](https://github.com/Azure/azure-functions-vs-build-sdk#q-i-need-a-different-newtonsoftjson-version-what-do-i-do)!
+But, what does that really mean?  Well, there is some additional documentation hidden in plain sight, but oh-so easily overlooked, in the [Readme for Azure Functions on Github right here](https://github.com/Azure/azure-functions-vs-build-sdk#q-i-need-a-different-newtonsoftjson-version-what-do-i-do)!
 
 For posterity, I'm capturing the current Q&A on Json in this thumbnail:
 > <img src="../assets/img/2020-08-01-azure-functions-newtonsoft-json-conflict/azure-fn-qa-capture-browser-window.png " class="thumbnail" data-zoomable />
 
-So applying that (incredibly easy solution), all we need to really do is add a direct reference to our primary project -- the one that is using the Azure Functions SDK -- then things do start to get a lot better!  Not perfect (more on that in a sec.) but much better:
+So applying that (incredibly easy solution), all we need to really do is add a direct reference to our primary project -- the one that is using the Azure Functions SDK -- then things do start to get a lot better!  Not perfect (more on that in a sec.) but much better.
 
 In Visual Studio for .Net Core, we can just double-click the project name and we see the project file's raw Xml and edit it... or use Nuget Package manager to just install the version of Json needed (*should be the version that matches the library you are using, or the latest version needed among various libraries*). For us this was **Newtonsoft.Json v12.0.1**.
 
@@ -99,7 +97,7 @@ In Visual Studio for .Net Core, we can just double-click the project name and we
   </ItemGroup>
 ```
 
-**FYI, In our case, our primary project does not even need Newtonsoft.Json.** We aren't using it in our primary code at all and that's why there was no reference before. But, this allows us some modicum of control over the version of Newtonsoft.Json that will be resolved when *our own application code runs*!  But there are [still some gotchas](#gotchas) that must be understood to help avoid future pain from random runtime errors (heaven forbid after it's all in Production)!
+**FYI, In our case, our primary project does not even need Newtonsoft.Json.** We aren't using it in our primary project's code at all and that's why there was no reference before. But, this allows us some modicum of control over the version of Newtonsoft.Json that will be resolved when *our own application code runs*!  But there are [still some gotchas](#gotchas) that must be understood to help avoid future pain from random runtime errors (heaven forbid after it's all in Production)!
 
 ## You can also validate this as follows:
 
@@ -124,14 +122,16 @@ Both the [FAQ here](https://github.com/Azure/azure-functions-vs-build-sdk#q-why-
 
 Our application will be running with the expected version of **Newtonsoft.Json v12.0.1**, but the Azure Functions Runtime on the server may not (*because it appears to run in it's own process or AssemblyLoadContext before communicating with our code*)! 
 
-That's why this dependency constraint existed in the first place and it really makes sense once you understand the fundamentals.  But we didn't eliminate the issue of multiple versions, we just enabled our application to resolve our version so that it could run.
+That's why this dependency constraint existed in the first place and it really makes sense once you understand the fundamentals. But we didn't eliminate the issue of multiple versions, we just enabled our application to resolve our version so that it could run.
 
-There are still interaction points with the core Azure Function runtime where we must avoid sharing classes because they will not be compatible (per Assembly class identification).  The app will compile because of the late-binding, but these exceptions/errors will occur at runtime!
+There are still interaction points with the core Azure Function runtime where we must avoid sharing inconpatible classes to prevent runtime exceptions. The app will compile successfuly because of the late-binding, but these exceptions/errors will occur at runtime!
 
-This is most likely to occur if you are using core Newtonsoft.Json classes like JObject, or JToken as a primary means of passing data into and out of the Azure Functions (e.g. as DTO). You likely would be doing this through variable binding, but could also be through other SDK method parameters, etc.  As the FAQ shows, here's an example:
+This is most likely to occur if you are using core Newtonsoft.Json classes like JObject, or JToken as a primary means of passing data into and out of the Azure Functions (e.g. as DTO). You likely would be doing this through variable binding, but could also be through other SDK method parameters, etc. 
+
+As the FAQ shows, here's an example:
 > <img src="../assets/img/2020-08-01-azure-functions-newtonsoft-json-conflict/azure-fn-faq-jobject-binding-example.png " class="medium center" data-zoomable />
 
-Notice the JObject class is used as the class type for the queue binding. This is instructing the Azure Functions runtime to use that class type for dynamic (late-binding) de-serialization of the data from the Queue that will trigger this Azure Function. When this JObject is created it will be from v11.0.1 (*Newtonsoft.Json*) as determined by the Azure Function runtime, but when passed into your function your code will execute with v12.0.1 (*because we've now fixed that*), and **an exception will occur immediately!**
+Notice the JObject class is used as the class type for the queue binding. This is instructing the Azure Functions runtime to use that class type for dynamic (late-binding) de-serialization of the data from the Queue that will trigger this Azure Function. When this JObject is created it will be from v11.0.1 (*Newtonsoft.Json*) as determined by the Azure Function runtime, but when passed into your function your code will execute with v12.0.1 (*because we've now fixed that*), and **an exception may occur immediately!**
 
 As stated in the FAQ:
 > That jObject instance will be fulfilled by the runtime version of JObject. 
@@ -154,7 +154,7 @@ public static async Task ProcessQueue([QueueTrigger] HelloQueuePayload helloQueu
 
 ```
 
-Or here's an example of taking in a serialized string as the payload; which is ever-so-slightly less recommended, but for really still perfectly fine if you implement validation):
+Or here's an example of taking in a serialized string as the payload; which is ever-so-slightly less recommended, but truthfully is still perfectly fine if you implement validation):
 
 ```csharp
 [FunctionName("hello")]
@@ -165,4 +165,3 @@ public static async Task ProcessQueue([QueueTrigger] String helloQueuePayloadTex
 }
 
 ```
-
