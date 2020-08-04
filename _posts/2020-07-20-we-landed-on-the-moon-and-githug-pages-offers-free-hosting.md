@@ -44,15 +44,15 @@ But, at the root of it all I was looking for something simple! Something that wo
 
 So my mind quickly shifted away from the idea of managing an html site via Blob storage, etc. Managing a pure html site seemed like unnecessary work, and also violated core tenets I preach to my clients daily about keeping content separate from presentation.... but how could I do this more simply?
 
-So then I started thinking about using a GitHub Wiki and Markdown... similar to how [Atlassian Confluence](https://www.atlassian.com/software/confluence?&aceid=&adposition=&adgroup=99595999889&campaign=9518255230&creative=431806031492&device=c&keyword=confluence&matchtype=e&network=g&placement=&ds_kids=p51982324819&ds_e=GOOGLE&ds_eid=700000001542923&ds_e1=GOOGLE&gclid=Cj0KCQjwpNr4BRDYARIsAADIx9z84Mxz0ptsWI8Gh8eCH2SFuuKpbPubGJYdxivVQ_iXP3nq10WVWn8aAt0cEALw_wcB&gclsrc=aw.ds) helps us out with our clients... to focus on writing, less on all the other overhead of sharing it out.  
+So then I started thinking about using a GitHub Wiki and Markdown... similar to how [Atlassian Confluence](https://www.atlassian.com/software/confluence?&aceid=&adposition=&adgroup=99595999889&campaign=9518255230&creative=431806031492&device=c&keyword=confluence&matchtype=e&network=g&placement=&ds_kids=p51982324819&ds_e=GOOGLE&ds_eid=700000001542923&ds_e1=GOOGLE&gclid=Cj0KCQjwpNr4BRDYARIsAADIx9z84Mxz0ptsWI8Gh8eCH2SFuuKpbPubGJYdxivVQ_iXP3nq10WVWn8aAt0cEALw_wcB&gclsrc=aw.ds) helps us out with our clients... to focus on writing, and less on all the other overhead of sharing it out.  
 
 The concept of the GitHub commits using Markdown for content, into a simple site structure in a GitHub Wiki really resonated.  Let GitHub provide the web serving/hosting, some minimal SEO, etc. I thought!  Yeah, now we're cookin'...
 
-<img src="../assets/img/2020-07-20-we-landed-on-the-moon-and-github-pages-offers-free-hosting/google-search-using-github-for-blog.jpg" class="fullsize" data-zoomable />
+<img src="../assets/img/2020-07-20-we-landed-on-the-moon-and-githug-pages-offers-free-hosting/google-search-using-githug-for-blog.jpg" class="fullsize" data-zoomable />
 
 When researching that idea (and later learning of other limitations), I learned that GitHub hosts not only Repositories, but also websites for those Repositories.  And offers a free website for each user account -- yeah... _we landed on the moon_ is exactly what I was thinking at this point!
 
-After deep diving into these other awesome blogs with great info. and Github's own tutorials:
+So I jumped into the deep-end with these other awesome blogs (*great info.*) and Github's own tutorials:
 
 - [https://github.com/stickfigure/blog/wiki/GitHub's-wiki-makes-a-pretty-decent-blogging-platform](https://github.com/stickfigure/blog/wiki/GitHub's-wiki-makes-a-pretty-decent-blogging-platform)
 - [https://jekyllrb.com/docs/github-pages/](https://jekyllrb.com/docs/github-pages/)
