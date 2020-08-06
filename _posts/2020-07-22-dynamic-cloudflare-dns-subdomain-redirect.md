@@ -20,6 +20,20 @@ Well Cloudflare offers a pretty simple, yet very useful capability to manage the
 
 In my case I thought that it would be useful to share links using the very friendly domain _blog.cajuncoding.com_, but have that redirect to the primary apex domain -- since I don't actually have a separate site, and [GitHub Pages doesn't support it](#github-limit-of-one-domain). 
 
+A Page Rule is basically just a processing rule for all url requests that are routed and proxied through CloudFlare, therefore **the url must be routed/proxied through CloudFlare for PageRules to work**.  This means that any url you want ot build a page rule for needs to also have a corresponding DNS entry that is handling it.
+
+### First we must have a DNS Configuration for Page Rule to match:
+In my case, I need to have a DNS CNAME set up for the ***blog.cajuncoding.com*** subdomain, and I just route that to the apex domain *cajuncoding.com* as follows:  
+
+<img src="../assets/img/2020-07-22-dynamic-cloudflare-dns-subdomain-redirect/setup-blog-prefix-dns-cname.png " class="fullsize" data-zoomable />  
+
+Now with only a DNS setup, my page will not work becuase GitHub Pages (where I'm hosting the site) only supports two bindings when you use an Apex domain, as I am, with ***cajuncoding.com***:
+1. The default binding to the Apex domain: *cajuncoding.com*
+2. One additional default subdomain binding for **www**: *www.cajuncoding.com*
+
+So, the subdomain *blog.cajuncoding.com* will not work because GitHub Pages cannot not handle this subdomain. But, we can fix this with Url Routing in Cloudflare. And in my use-case (and probably many others), I don't mind having page redirection/forwarding since my goal is just to provide friendly url in various places (like LinkedIn).
+
+### Now we can set up the Page Rule in CloudFlare:
 In CloudFlare, just navigate to **Page Rules** & create a new page rule:
 <img src="../assets/img/2020-07-22-dynamic-cloudflare-dns-subdomain-redirect/navigate-to-page-rules.png " class="fullsize" data-zoomable />
 
