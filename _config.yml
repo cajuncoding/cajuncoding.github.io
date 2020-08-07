@@ -42,7 +42,7 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 # If you don't want to show a link to an RSS feed, set rss to "false".
 social-network-links:
-  #email: "brandon.r.bernard@gmail.com"
+  email: "brandon@cajuncoding.com"
   #facebook: deanattali
   github: cajuncoding
   #twitter: daattali
@@ -51,7 +51,7 @@ social-network-links:
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
-#  stackoverflow: "3943160/daattali"
+  stackoverflow: "story/cajuncoding"
 #  snapchat: deanat78
 #  instagram: deanat78
 #  youtube: user/deanat78
