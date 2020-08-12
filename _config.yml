@@ -44,17 +44,16 @@ round-avatar: true
 # If you don't want to show a link to an RSS feed, set rss to "false".
 social-network-links:
   #email: "brandon@cajuncoding.com"
-  #facebook: deanattali
   github: cajuncoding
-  #twitter: daattali
   linkedin: brandon-bernard
+  stackoverflow: "7293142/cajuncoding"
+  twitter: TheCajunCoder
+  facebook: cajuncoding
+  instagram: cajuncoding
   rss: true
 #  reddit: yourname
-#  linkedin: daattali
 #  xing: yourname
-  stackoverflow: "7293142/cajuncoding"
 #  snapchat: deanat78
-#  instagram: deanat78
 #  youtube: user/deanat78
 #  spotify: yourname
 #  telephone: +14159998888
