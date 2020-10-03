@@ -15,7 +15,7 @@ My name is Brandon and I am a [Cajun](https://en.wikipedia.org/wiki/Cajuns), hus
 
 As a Cajun, my personality is very upbeat and outspoken -- occasionally exhibiting the loud-and-proud element that's oh-so prevalent in [South Louisina](http://www.louisianafolklife.org/LT/Articles_Essays/la_3_folk_reg.html#tab3). But I also believe heavily in teamwork! I’m passionate about software technology, and what I love about consulting is the opportunity it provides to help so many different people, in virtually any industry, use technology to improve their experiences.
 
-I also fancy myself as a [psuedo-renaissance-man of tech things](https://www.dictionary.com/browse/renaissance-man), dabbling in a wide variety of technology from software design/architecture, to home-auotmation and a dash of electronics here and there. And strive to become provificient in the things that most benefit my role as a consultant and make my life or, at least more fun! 
+I also fancy myself as a [psuedo-renaissance-man of tech things](https://www.dictionary.com/browse/renaissance-man), dabbling in a wide variety of technology from software design/architecture, to home-auotmation and a dash of electronics here and there. And strive to become proficient in the things that most benefit my role as a consultant and make my life easier, or at least more fun! 
 
 Outside of code, one of my favorite passions, is to express my artistic side with [landscape photography](https://www.flickr.com/photos/77885066@N06/)...always striving to improve and live in the moment of each shutter.
 
