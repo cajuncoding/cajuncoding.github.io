@@ -64,6 +64,7 @@ So I jumped into the deep-end with these other awesome blogs (*great info.*) and
 - A build process that's already integrated into GitHub via [**Jekyll**](https://jekyllrb.com/)
 - Reasonable separation of content from presentation via **Markdown**
 - Super fast performance of a statically built site served from [**GitHub Pages**](https://pages.github.com/).
+- Really simple pseudo-CMS behavior via [Prose.io](http://prose.io).
 - Your own domain name right out-of-the-box: **cajuncoding.github.io**
 - Oh Snap! You can even use your own custom domain (Apex or Subdomain)???
     - I'm already using the awesome DNS services from [**Cloudflare**](https://www.cloudflare.com) for enterprise performance and reliability!
