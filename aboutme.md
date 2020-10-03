@@ -26,12 +26,12 @@ The bit above is a little about who I am, and an integral part of what I do...te
 
 I am the Director of Technology Consulting at [EXLRT](http://www.exlrt.com) for the US operations. 
 
-My personal philosophy is to strive to provide a "consultant first..." approach to solving problems, which often yields a very different solution than a "technology first..." mindset. And, I also firmlly believe that creating the best solutions is far more art than it is science! 
+My personal philosophy is to strive to provide a "consultant first..." approach to solving problems, which often yields a very different solution than a "technology first..." mindset. And, I also firmly believe that creating the best solutions is far more art than it is science! 
 
 So by striving for a client-centric & quality based focus, I hope to ensure that solutions add real value by empowering my clients — not constraining them — with technology.
 
 ## My experience
-I have 17+ years of experience in technology, consulting, and software development. My development experience is full stack & cross platform, using Microsoft and Java technologies, for enterprise solutions. 
+I have 20+ years of experience in technology, consulting, and software development. My development experience is full stack & cross platform, using Microsoft and Java technologies, for enterprise solutions. 
 
 I've been fortunate enough to work for some amazing enterprises & Fortune 100 companies (see below).  
 
@@ -41,10 +41,13 @@ I've been fortunate enough to work for some amazing enterprises & Fortune 100 co
 - Starbucks
 - Hewlett Packard
 - ExxonMobil
+- Harris County Engineering Department (Permitting Division)
 - Wells Fargo
+- Boston Consulting Group (BCG)
 - American Express
 - Universal Studios
 - Acer (Tawain)
+- Sodexo & SodexoMyWay
 - AEG Live
 
 
