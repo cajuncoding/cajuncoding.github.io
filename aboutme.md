@@ -17,7 +17,7 @@ As a Cajun, my personality is very upbeat and outspoken -- occasionally exhibiti
 
 I also fancy myself as a [psuedo-renaissance-man of tech things](https://www.dictionary.com/browse/renaissance-man), dabbling in a wide variety of technology from software design/architecture, to home-auotmation and a dash of electronics here and there. And strive to become proficient in the things that most benefit my role as a consultant and make my life easier, or at least more fun! 
 
-Outside of code, one of my favorite passions, is to express my artistic side with [landscape photography](https://www.flickr.com/photos/77885066@N06/)...always striving to improve and live in the moment of each shutter.
+Outside of code, one of my favorite passions, is to express my artistic side with [landscape photography](https://www.flickr.com/photos/77885066@N06/)...always striving to improve and live in the moment of each shutter snap.
 
 If you made it here then I truly hope that you have found something that I've shared to be useful, even if it's to learn _what not to do_.
 
