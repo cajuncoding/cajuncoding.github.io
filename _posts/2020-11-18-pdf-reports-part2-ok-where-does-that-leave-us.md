@@ -103,54 +103,64 @@ solutions as well as paid solutions; though the license costs are also pretty st
 Based on my own research, this is a non-exhaustive list of the prevalent solutions that offer good quality rendering 
 & feature rich options:
 
- - RenderX XEP -- http://www.renderx.com/tools/xep.html 
-   - License Costs required
+ - [RenderX XEP](http://www.renderx.com/tools/xep.html)
+   - License Costs required (pricey)
    - Great compliance with XSL-FO spec.
- - Antennahouse Formatter -- https://www.antennahouse.com/
-   - License Costs required
+ - [Antennahouse Formatter](https://www.antennahouse.com/)
+   - License Costs required (pricey)
    - Great compliance with XSL-FO spec.
- - Apache Formatting Objects Processor (Apache FOP) -- https://xmlgraphics.apache.org/fop/ 
+ - [Apache FOP (Apache Formatting Objects Processor](https://xmlgraphics.apache.org/fop/)
    - Free Open Source
    - Good compliance with XSL-FO spec.
    - Available also as:
-       - JSReport Engine with FOP Recipe -- https://jsreport.net/learn/fop-pdf
-       - Apache FOP via Azure Functions Serverless -- https://github.com/cajuncoding/ApacheFOP.Serverless 
- - FO.NET – https://github.com/prepare/FO.NET 
-   - Apache FOP port to .Net (fully C# code)
-   - Based on an old but functional version of Apache FO; no longer updated/supported.
+       - [Apache FOP serverless via Azure Functions](https://github.com/cajuncoding/ApacheFOP.Serverless)
+	     - Free Open Source
+		 - Uses real Apache FOP in an ultra-lightweight Java API for Azure Functions.
+       - [JSReport Engine with FOP Recipe](https://jsreport.net/learn/fop-pdf)
+	     - License Cost required, but reasonably priced
+		 - Provides ability to use real Apache FOP within their framework
+ - [FO.NET](https://github.com/prepare/FO.NET)
+   - Free Open Soure
+   - Technically a different solution because it's all C#, but it is actually a port of Apache FOP
+   - Based on an old -- but functional -- version of Apache FOP; no longer updated/supported.
    - Functional (moderate) compliance with XSL-FO spec.
 
 For XSL-FO you have similar options for the paid for solutions, as well as a long-standing reliable open source option 
 from Apache.  The Apache FOP option has been included in many other ports, frameworks, wrappers, etc. over the years to 
-offer the greater control of PDF layout and rendering needed.
+because it offers the greater control of PDF layout and rendering needed.
 
 In addition, the Apache FOP solution is a purely SDK based approach that can scale easily and even runs perfectly 
 well in an Azure Function serverless environment.
 
-And the trade off from CSS Paged Media approach is that the markup is all self-contained – meaning all details are part 
-of the source.  There are no separate layout files such as external CSS files, so XSL-FO is more analogous Embedded and 
-Inline Styles. So the trade-off is that the markup itself is larger and more complex.  
+One of the trade off between XSL-FO and CSS Paged Media approach is that the markup is all self-contained in an XSL-FO document – 
+meaning all details are part of the source markup.  There are no separate layout files such as external CSS files like are possible 
+with CSS Paged Media, so in this respect XSL-FO is more analogous to Embedded and Inline Styling use. 
+So the trade-off is that the markup itself is larger and more complex instead of only the CSS files being extremely complex as 
+they are with CSS Paged Media.  
 
-But depending on the perspective, this isn’t necessarily a negative issue.  This can be managed effectively in the 
-templating engine with partial templates, template includes, variable replacements, or and dynamically generated markup 
-so the actual templates can still be very DRY with lots of style re-use throughout the final markup. 
+But depending on the perspective, this isn’t necessarily a negative issue. This idea of styling re-use can be mostly managed effectively 
+in the templating engine with partial templates, template includes, variable replacements, or and dynamically generated markup 
+so the actual template code can still be very DRY with lots of style re-use throughout the final markup. 
 
-And this may lend itself to a less complex development environment, especially for dynamically rendered reports.  And, 
-has a nice advantage in that it fits very well with a Pdf as a Service (PDF rendering server) approach such as that 
-provided by the ApacheFOP.Serverless project.
+And this may lend itself to a less complex development environment, especially for dynamically rendered reports.  Theres no needfor 
+additional build processes, CSS pre-processors, etc. And, it has a nice advantage in that it fits very well with a Pdf as a Service 
+approach such as that provided by the [ApacheFOP.Serverless project](https://github.com/cajuncoding/ApacheFOP.Serverless) whereby a single 
+markup file can be sent to the service more easily than a set of many files; granted with CSS Paged Media we could also use embedded styles,
+but that also mitigates some of the value proposition of CSS.
 
 ### Conclusions:
 
-So if you have a very cutting edge environment, and/or a lot of front end development expertise on the team that is 
-willing to work with back-end to develop a build process and workflow for developing and managing report templates, 
-then CSS Paged Media is an awesome spec. with some powerful solution options that are capable of rending high quality 
-and absolutely beautiful PDF results!  But there is complexity, evolving spec., and likely license costs to also consider.
+So if you have a very cutting edge environment, and your use-cases or requirements will truly get value from the increible power 
+of CSS (likely with a paid license product). And you have a lot of front-end development expertise on the team that is 
+willing to work with the back-end team to develop a build process and workflow for developing and managing report templates.
+Then CSS Paged Media is an awesome spec. with some powerful solution options that are capable of rending high quality 
+and absolutely beautiful PDF results!  But there is complexity, an evolving spec., and most likely license costs to consider.
 
 If however, you want to minimize complexity of your technology stack and focus primarily on having a solid, reliable, 
-platform for rendering quality PDF outputs with paged-media control then Xsl Formatting Objectes is in many cases a 
+platform for rendering quality PDF outputs with _paged-media_ control, then Xsl Formatting Objectes is in many cases a 
 better selection. Your back-end development team will likely have equal or better expertise in managing the reporting 
-templates along with other synergies since they are likely rendered from the back-end application. And the maturity of 
-XSL-FO ensures that you can start with ApacheFOP as reliable free open source solution and move in the direction of 
+templates along with other synergies since they are likely rendered from the back-end application anyway. And the maturity of 
+XSL-FO ensures that you can start with ApacheFOP, as reliable free open source solution, and move in the direction of 
 licensed options easily when/if needed.
 
 
