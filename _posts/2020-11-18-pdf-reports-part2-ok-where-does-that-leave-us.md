@@ -142,7 +142,7 @@ in the templating engine with partial templates, template includes, variable rep
 so the actual template code can still be very DRY with lots of style re-use throughout the final markup. 
 
 And this may lend itself to a less complex development environment, especially for dynamically rendered reports.  Theres no needfor 
-additional build processes, CSS pre-processors, etc. And, it has a nice advantage in that it fits very well with a Pdf as a Service 
+additional build processes, CSS pre-processors, etc. And, it has a nice advantage in that it fits very well with a PDF as a Service 
 approach such as that provided by the [ApacheFOP.Serverless project](https://github.com/cajuncoding/ApacheFOP.Serverless) whereby a single 
 markup file can be sent to the service more easily than a set of many files; granted with CSS Paged Media we could also use embedded styles,
 but that also mitigates some of the value proposition of CSS.
@@ -183,7 +183,7 @@ However, we can greatly simplify the set of options by narrowing it down via a s
 that are critical for specific use cases.  In doing so, we can learn a lot about what makes a good report rending 
 option vs the pitfalls of many of the less optimal choices.
 
-For now, I am going to focus on Pdf rendering as it is still the “king of the hill” when it comes to portable and 
+For now, I am going to focus on PDF rendering as it is still the “king of the hill” when it comes to portable and 
 printable file formats that are universally viewable across machines & devices (computers, phones/tablets, operating systems, etc.).
 
 In my experience, here is a non-exhaustive list of valuable criteria for consideration (esp. for technology selection):
@@ -217,7 +217,7 @@ output and break/roll content over into pages.  And you cannot, in a very contro
 
 And, for now we are ignoring the additional complexity that is also inherent in trying to implement this in a scalable and 
 reliable way ([as many have ](https://medium.com/compass-true-north/go-service-to-convert-web-pages-to-pdf-using-headless-chrome-5fd9ffbae1af)). 
-Now, if the use-case is speficially to convert Html to Pdf for storage or snapshots to meet 
+Now, if the use-case is speficially to convert Html to PDF for storage or snapshots to meet 
 regulatory or compliance requirements then this may be exactly what is needed, but that is an edge use case and should not 
 be conflated with rendering quality print outputs.
 
@@ -230,14 +230,14 @@ document via code.  This approach is not only exhaustive & error prone, but it�
 require massively greater amount of effort for a development team to deliver.  I refer to this as a code-based approach 
 and is analogous to a coordinate based approach to creating output.
 
-However, rendering Pdf outputs using a templated approach that provides great separation between presentation (the template) 
+However, rendering PDF outputs using a templated approach that provides great separation between presentation (the template) 
 and data (the Model) is far more flexible and productive.  And, it brings to the forefront all the well known and well 
 documented benefits of separating data from presentation that is prolific in all other aspects of web development 
 (e.g. MVC, MVP, MVVM, etc.).
 
 Now there are very valid use-cases for the code-based processing of Pdfs, but this is generally most beneficial for 
-pre-processing and post-processing Pdf files and not the raw creation of quality reports as Pdf.  For example, if images or 
-separate Pdf files need to be merged into a Report, then that is a fantastic use-case for a code based library to work with 
+pre-processing and post-processing PDF files and not the raw creation of quality reports as Pdf.  For example, if images or 
+separate PDF files need to be merged into a Report, then that is a fantastic use-case for a code based library to work with 
 while maintaining all the flexibility and control of layout within the template (e.g. you can render placeholder(s) out 
 where all images should be inserted into).
 
@@ -300,7 +300,7 @@ forgoe #2 above because without the control needed to generate high quality outp
 compromise your requirements or invest a tremendous amount of time and resources only to encounter a road block here.
 
 Another point to note here is that product/solution maturity is very important for a professional enterprise environment. 
-I’ll use NodeJS NPM packages as an example for this…. You can quickly find many libraries that claim to render Pdf outputs 
+I’ll use NodeJS NPM packages as an example for this…. You can quickly find many libraries that claim to render PDF outputs 
 but these packages are very often immature and feature-poor; this applies to many libraries out there in any language 
 (C#, Python, NodeJS, Java, etc.). 
 
