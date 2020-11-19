@@ -36,8 +36,8 @@ In a web environment, we may need to render reports in a variety of formats such
 to highlight is that these formats are dramatically different, therefore relying on any universal converter (e.g. HtmlToPdf 
 or HtmlToExcel) will almost always yield unsatisfactory results for professional and enterprise use-cases. 
 
-So we can get these out of the way, and immediately eliminate all ìconverterî options as viable solutions because we will 
-assume that for professional use cases a much greater amount of control and quality will be needed for all output types ñ especially Pdf.
+So we can get these out of the way, and immediately eliminate all ‚Äúconverter‚Äù options as viable solutions because we will 
+assume that for professional use cases a much greater amount of control and quality will be needed for all output types ‚Äì especially Pdf.
 
 #### 2. Is it optimized for true Print output (not Web/Screen output)
 
@@ -47,12 +47,12 @@ layouts.
 Web layouts revolve around the concept of an infinitely scrollable canvas (in both horizontal & vertical directions) with a 
 Viewport (screen size) that displays a section of that infinite canvas.  
 
-This is in sharp contrast to printed outputs that revolve around the ìpageî concept where content must fit on a single page or 
+This is in sharp contrast to printed outputs that revolve around the ‚Äúpage‚Äù concept where content must fit on a single page or 
 it will roll over the next page; referred to as paged-media. Pages may have varying orientations and sizes but they are not 
 infinite.  In fact, pages are highly controllable and may include repeatable content on each page such as header, footers, etc.
 Trying to make a web layout fit into a printable layout is like trying to put a square peg into. A round hole. 
 
-It can work in some cases but itís never optimal and very often will have poor results.  Iím sure youíve noticed how the 
+It can work in some cases but it‚Äôs never optimal and very often will have poor results.  I‚Äôm sure you‚Äôve noticed how the 
 vast majority of web pages look printed (e.g. Print Preview) is used in the browser.  Even when specialized CSS Print Stylesheets 
 are used is still no control over the concept of a page; you must accept how the chosen browser engine chooses to render the 
 output and break/roll content over into pages.  And you cannot, in a very controlled manner, define a header/footer. 
@@ -63,12 +63,12 @@ Now, if the use-case is speficially to convert Html to Pdf for storage or snapsh
 regulatory or compliance requirements then this may be exactly what is needed, but that is an edge use case and should not 
 be conflated with rendering quality print outputs.
 
-Therefore, normal browser-based rendering and use of browser engines such as Chrome to generate Pdfís from normal Html & CSS 
+Therefore, normal browser-based rendering and use of browser engines such as Chrome to generate Pdf‚Äôs from normal Html & CSS 
 is an inherently flawed process.
 
 #### 3. Is a Templating approach to rendering supported?
 Many solutions revolve around a PDF API approach that requires generating, manipulating, and outputting data into a PDF 
-document via code.  This approach is not only exhaustive & error prone, but itís also extremely constraining and will 
+document via code.  This approach is not only exhaustive & error prone, but it‚Äôs also extremely constraining and will 
 require massively greater amount of effort for a development team to deliver.  I refer to this as a code-based approach 
 and is analogous to a coordinate based approach to creating output.
 
@@ -92,12 +92,12 @@ this separation of data from presentation.
 
 The issue we are now focused on is the nature of the templating engine and its capabilities.  On the positive side, proprietary
  reporting engines may support very advanced functionality (if the product chooses to).  But immediately you will encounter a
- negatively mitigating aspect ñ the proprietary nature of the templating engine.
+ negatively mitigating aspect ‚Äì the proprietary nature of the templating engine.
 
 You may also notice that there is not really a templating language per-se, but rather a designer tool.  This is a dependency
  that is useful for some environments whereby normal users  (not developers) are creating new reports based on the same or similar data in an ongoing basis. But, this is a limitation in many environments whereby the development team will create the reports and ongoing maintenance of those reports is more important than the need to create net new reports.
 These designer tools usually have limited or no support for re-useable components between reports, and even when they do 
-itís very complex. In addition, they usually encourage bad habits such as data-binding to databases which tightly couples 
+it‚Äôs very complex. In addition, they usually encourage bad habits such as data-binding to databases which tightly couples 
 the reports with the data that it consumes.
 
 However, the most critical issue with many reporting tools, is the proprietary nature of their rendering engines.  This is 
@@ -113,15 +113,15 @@ And finally, these technologies may or may not work well in Cloud serverless env
 differences for enterprises that need to decrease server management complexity, costs, overhead, etc.
 
 There is one more thing to touch on regarding templating engines as they relate to some code-based approaches described 
-in #3 above.  Often these libraries claim to ìsupportî a templating based approach, but what they mean is that you can 
-build your own templating language using their SDK if you choose.  This may be intriguing in that ìI want to prove that 
-I can do itî kind of way, but in case itís not blazingly obvious this approach will be riddled with complexity and limitations.
+in #3 above.  Often these libraries claim to ‚Äúsupport‚Äù a templating based approach, but what they mean is that you can 
+build your own templating language using their SDK if you choose.  This may be intriguing in that ‚ÄúI want to prove that 
+I can do it‚Äù kind of way, but in case it‚Äôs not blazingly obvious this approach will be riddled with complexity and limitations.
 
 So, then what is the alternative?  Well the industry has evolved a couple alternatives over the years that address these 
-concerns by gaining the value of Markup language (e.g. HTML) without the pitfallsÖ but Iím getting slightly ahead of myself.
+concerns by gaining the value of Markup language (e.g. HTML) without the pitfalls‚Ä¶ but I‚Äôm getting slightly ahead of myself.
 
 #### 5. Service API or Library SDK/API support.
-This may seem obvious, but in my experience it really isnít.  Itís also related to the proprietary nature of rendering 
+This may seem obvious, but in my experience it really isn‚Äôt.  It‚Äôs also related to the proprietary nature of rendering 
 engines discussed in #4 above, but it is not necessarily the same.
 
 Many solutions available (via Google search) offer a command line interface (CLI), but do not necessarily provide an 
@@ -130,7 +130,7 @@ actual SDK or API to consume in your web application.
 The use of solutions such as this result in development of custom code wrappers for the CLI, which will also introduce 
 unnecessary complexity, while at the same time likely provide many limitations and issues in multi-threaded web environments.
 
-Suffice it to say that we should ignore any solutions that donít offer a good SDK or API that can be easily integrated 
+Suffice it to say that we should ignore any solutions that don‚Äôt offer a good SDK or API that can be easily integrated 
 into a web application in a stable/reliable way.
 
 #### 6. Support for your use-cases/requirements without unnecessary complexity.
@@ -142,13 +142,13 @@ forgoe #2 above because without the control needed to generate high quality outp
 compromise your requirements or invest a tremendous amount of time and resources only to encounter a road block here.
 
 Another point to note here is that product/solution maturity is very important for a professional enterprise environment. 
-Iíll use NodeJS NPM packages as an example for thisÖ. You can quickly find many libraries that claim to render Pdf outputs 
+I‚Äôll use NodeJS NPM packages as an example for this‚Ä¶. You can quickly find many libraries that claim to render Pdf outputs 
 but these packages are very often immature and feature-poor; this applies to many libraries out there in any language 
 (C#, Python, NodeJS, Java, etc.). 
 
 #### 7. Price/Cost!
-Ok, this is always a big questionÖ and the smaller a company you work with, the bigger the question it is.  But in my 
-personal experience, itís really just as big of a concern for large company environments also -- usually due to the tremendous 
+Ok, this is always a big question‚Ä¶ and the smaller a company you work with, the bigger the question it is.  But in my 
+personal experience, it‚Äôs really just as big of a concern for large company environments also -- usually due to the tremendous 
 red-tape involved in procurement processes, project budget constraints, etc.
 
 So, the important aspect is flexibility in price/costs as it relates to our existing technology stack, development team 
