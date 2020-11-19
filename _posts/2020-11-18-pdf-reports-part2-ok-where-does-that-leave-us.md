@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: PDF Reportings from Web Apps, How hard can it be?
-subtitle: 'Why markup based Pdf Templating is the way to go...'
+subtitle: 'Considerations for a robust PDF or Web reporting solution?'
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: /assets/img/pdf-icon.png
 share-img: /assets/img/pdf-icon.png
