@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: PDF Reportings from Web Apps, How hard can it be?
-subtitle: 'Considerations for a robust PDF or Web reporting solution?'
+subtitle: 'Why markup based Pdf Templating is the way to go...'
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: /assets/img/pdf-icon.png
 share-img: /assets/img/pdf-icon.png
@@ -10,7 +10,6 @@ tags:
   - azure-functions
   - serverless
   - 'c#'
-  - NodeJS
   - pdf
   - pdf templating
   - .net
@@ -20,12 +19,162 @@ tags:
 This is a multi-part series that I hope may be helpful to navigate the complexities of technology selection
 and other important considerations for implementing Pdf Reporting in today's modern web applications.
 
+[In the last post](/2020-11-17-pdf-reports-part1-how-hard-can-it-be) we walked through a pretty exhaustive mental excercise
+focused on key considerations for quality PDF rendering from a web application...  We spent most of the time reviewing
+the dramatic difference between web rendering and printable-media rendering -- something that many novice development teams 
+don't fully appreciate.
+
+### So...Where does that leave us?
+Well, to summarize the previous post of the above, we introduced the idea of a templated based approach to rendering 
+PDF based reports using a markup language that has robust support for printable-media and avoids the pitfalls of normal 
+Html/CSS.  And, offers flexibility via paid for as well as open source implementations that we might use depending on 
+our use-cases and/or cost constraints.
+
+Now, that narrows things down really-really well as the industry has provided some solutions that meet this criteria 
+over the years and the following are the two main players
+- **Xsl Formatting Objects** -- _A markup language for XML document formatting that is most often used to generate PDF files.__
+
+- **CSS Paged Media** -- _CSS module specifies how pages are generated and laid out to hold fragmented content in a paged presentation (XHTML + CSS)._
+
+These are both industry accepted standards that are completely agnostic of implementation technology, and are supported by a variety of solutions – free, open source, & paid for.__
+
+And both of these provide a templating language that is a purely declarative markup language.  Therefore, we are free 
+to use any templating technology we want including, but not limited to: Razor Templating in .Net, XSLT, JSP, JavaScript 
+based templating (e.g. React, VueJS) in NodeJS, etc.  As long as it’s capable of rendering well-formed markup output 
+(XHTML + CSS, or Xml).
+
+The key benefits is simply that we have low risk of being limited by templating language. And, we are free to develop 
+a robust data model separate from the templating presentation – which means that half of the process doesn’t change 
+if we need to change the presentation logic, layer, code, or even technology being used.  
+
+We achieve all the numerous benefits of known best practices for web development such as MVC, MVP, MVVM (all 
+enabling separation of Model data from Presentation) when rendering printable reports. This is great for flexibility 
+to remain congruent with existing technology stack(s) in use and for long term technology supportability/maintainability.
+
+#### CSS Paged Media:
+CSS Paged Media is the most modern (as in nearly bleeding edge) approach.  I say that because the spec. is still 
+evolving by the W3C.  And the best viable options have license costs, and the price isn’t what I consider cheap either; 
+based on my experience with clients and project delivery constraints.
+
+Based on my own research, this is a non-exhaustive list of the prevalent solutions that offer good quality rendering 
+& feature rich options (you will find many others are outlined here):
+
+ - [PDFReactor](https://www.pdfreactor.com/)
+   - License Costs required
+   - Good compliance with CSS Paged Media spec.
+ - [Prince (formerly PrinceXML)](https://www.princexml.com/)
+   - License Costs required
+   - Good compliance with CSS Paged Media spec.
+ - [Antennahouse CSS Formatter](https://www.antennahouse.com/)
+   - License Costs required
+   - Great compliance with CSS Paged Media spec.
+ - [WeasyPrint](https://weasyprint.org/)
+   - Free Open Source
+   - Not very compliant with CSS Paged Media spec; some non-standard proprietary implementations
+   - Python only
+
+Now I know what you Front End friendly developers are thinking . . . surely CSS is the more modern and better way to go.  
+Yes, it’s the more modern of the two, but there are some additional facts to consider before assuming that it is better
+for all environments (or teams).  
+
+There are some great paid for options, but the free open source solution is and not as compliant with the spec. and 
+uses some proprietary syntax for certain layout aspects, etc..
+
+In addition, the CSS can become extremely complex for layouts – as in thousands of lines of CSS.  Thereby requiring 
+the use of other technologies to better enable development such as CSS preprocessors, build processes, etc.  
+
+All of which senior Front End developers are likely very familiar with, but when you remember the context that most 
+Pdf rendering should occur in a back-end context – for security and data integrity reasons – then you may encounter 
+a conflicting skillset issue.  
+
+I did some preliminary research and it appears that WeasyPrint could likely be deployed in a serverless environment 
+using Azure Functions support for Python, but this is not yet proven.  And there is the fact that it’s not realy spec. 
+compliant.
+
+So, in my experience, it’s important to recognize how this may introduce unnecessary complexity into your project!
+
+#### Xsl Formatting Objects (XSL-FO) 
+
+Meanwhile [XSL-FO is very much alive and kicking](https://readwritecode.net/ebooks/2019/04/28/xsl-fo-is-alive-and-kicking.html).  
+XSL-FO is by the most mature spec for paged media rendering and was basically feature complete spec. in 2012. It’s 
+been around a while, is very mature, is used in many industries and companies, and has well known free open source 
+solutions as well as paid solutions; though the license costs are also pretty steep in my experience.
+
+Based on my own research, this is a non-exhaustive list of the prevalent solutions that offer good quality rendering 
+& feature rich options:
+
+ - RenderX XEP -- http://www.renderx.com/tools/xep.html 
+   - License Costs required
+   - Great compliance with XSL-FO spec.
+ - Antennahouse Formatter -- https://www.antennahouse.com/
+   - License Costs required
+   - Great compliance with XSL-FO spec.
+ - Apache Formatting Objects Processor (Apache FOP) -- https://xmlgraphics.apache.org/fop/ 
+   - Free Open Source
+   - Good compliance with XSL-FO spec.
+   - Available also as:
+       - JSReport Engine with FOP Recipe -- https://jsreport.net/learn/fop-pdf
+       - Apache FOP via Azure Functions Serverless -- https://github.com/cajuncoding/ApacheFOP.Serverless 
+ - FO.NET – https://github.com/prepare/FO.NET 
+   - Apache FOP port to .Net (fully C# code)
+   - Based on an old but functional version of Apache FO; no longer updated/supported.
+   - Functional (moderate) compliance with XSL-FO spec.
+
+For XSL-FO you have similar options for the paid for solutions, as well as a long-standing reliable open source option 
+from Apache.  The Apache FOP option has been included in many other ports, frameworks, wrappers, etc. over the years to 
+offer the greater control of PDF layout and rendering needed.
+
+In addition, the Apache FOP solution is a purely SDK based approach that can scale easily and even runs perfectly 
+well in an Azure Function serverless environment.
+
+And the trade off from CSS Paged Media approach is that the markup is all self-contained – meaning all details are part 
+of the source.  There are no separate layout files such as external CSS files, so XSL-FO is more analogous Embedded and 
+Inline Styles. So the trade-off is that the markup itself is larger and more complex.  
+
+But depending on the perspective, this isn’t necessarily a negative issue.  This can be managed effectively in the 
+templating engine with partial templates, template includes, variable replacements, or and dynamically generated markup 
+so the actual templates can still be very DRY with lots of style re-use throughout the final markup. 
+
+And this may lend itself to a less complex development environment, especially for dynamically rendered reports.  And, 
+has a nice advantage in that it fits very well with a Pdf as a Service (PDF rendering server) approach such as that 
+provided by the ApacheFOP.Serverless project.
+
+### Conclusions:
+
+So if you have a very cutting edge environment, and/or a lot of front end development expertise on the team that is 
+willing to work with back-end to develop a build process and workflow for developing and managing report templates, 
+then CSS Paged Media is an awesome spec. with some powerful solution options that are capable of rending high quality 
+and absolutely beautiful PDF results!  But there is complexity, evolving spec., and likely license costs to also consider.
+
+If however, you want to minimize complexity of your technology stack and focus primarily on having a solid, reliable, 
+platform for rendering quality PDF outputs with paged-media control then Xsl Formatting Objectes is in many cases a 
+better selection. Your back-end development team will likely have equal or better expertise in managing the reporting 
+templates along with other synergies since they are likely rendered from the back-end application. And the maturity of 
+XSL-FO ensures that you can start with ApacheFOP as reliable free open source solution and move in the direction of 
+licensed options easily when/if needed.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 When rendering reports from a web application, there are far more options available than can be counted. 
 However, we can greatly simplify the set of options by narrowing it down via a set of good practices and criteria 
 that are critical for specific use cases.  In doing so, we can learn a lot about what makes a good report rending 
 option vs the pitfalls of many of the less optimal choices.
 
-For now, I am going to focus on Pdf rendering as it is still the *king of the hill* when it comes to portable and 
+For now, I am going to focus on Pdf rendering as it is still the “king of the hill” when it comes to portable and 
 printable file formats that are universally viewable across machines & devices (computers, phones/tablets, operating systems, etc.).
 
 In my experience, here is a non-exhaustive list of valuable criteria for consideration (esp. for technology selection):
@@ -159,6 +308,6 @@ Any solution that has both paid and/or open source options that are robust enoug
 
 ### Where does that leave us?
 
-[In the next post](/2020-11-18-pdf-reports-part2-ok-where-does-that-leave-us) we will take a deeper look into where this leaves us...
+[In this next post](/2020-07-22-dynamic-cloudflare-dns-subdomain-redirect)we will take a deeper look into where this leaves us...
 
 
