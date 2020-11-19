@@ -2,7 +2,7 @@
 published: true
 layout: post
 title: PDF Reporting from Web Apps, How hard can it be?
-subtitle: 'Why markup based PDF Templating is the way to go...'
+subtitle: 'Part 2: Why markup based PDF Templating is the way to go...'
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: /assets/img/pdf-icon.png
 share-img: /assets/img/pdf-icon.png
@@ -15,9 +15,6 @@ tags:
   - .net
   - apache-fop
 ---
-
-This is a multi-part series that I hope may be helpful to navigate the complexities of technology selection
-and other important considerations for implementing Pdf Reporting in today's modern web applications.
 
 [In the last post](/2020-11-17-pdf-reports-part1-how-hard-can-it-be) we walked through a pretty exhaustive mental excercise
 focused on key considerations for quality PDF rendering from a web application...  We spent most of the time reviewing
