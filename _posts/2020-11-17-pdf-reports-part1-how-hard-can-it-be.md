@@ -163,7 +163,7 @@ red-tape involved in procurement processes, project budget constraints, etc.
 So, the important aspect is flexibility in price/costs as it relates to our existing technology stack, development team 
 expertise, etc.
 
-Any solution that has both paid and/or open source options that are robust enough to meet #7 above, is a winner in this category!
+Any solution that has both paid and/or open source options that are robust enough to meet #6 above, is a winner in this category!
 
 
 ## Where does that leave us?
