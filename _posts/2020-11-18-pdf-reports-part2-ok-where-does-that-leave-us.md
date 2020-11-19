@@ -21,35 +21,37 @@ and other important considerations for implementing Pdf Reporting in today's mod
 
 [In the last post](/2020-11-17-pdf-reports-part1-how-hard-can-it-be) we walked through a pretty exhaustive mental excercise
 focused on key considerations for quality PDF rendering from a web application...  We spent most of the time reviewing
-the dramatic difference between web rendering and printable-media rendering -- something that many novice development teams 
-don't fully appreciate.
+the dramatic difference between web rendering and printable-media rendering -- something that, I've observed, novice development 
+teams don't fully appreciate.
 
 ### So...Where does that leave us?
 Well, to summarize the previous post of the above, we introduced the idea of a templated based approach to rendering 
 PDF based reports using a markup language that has robust support for printable-media and avoids the pitfalls of normal 
-Html/CSS.  And, offers flexibility via paid for as well as open source implementations that we might use depending on 
+Html/CSS.  And, offers flexibility via paid-for as well as open source implementations that we might use depending on 
 our use-cases and/or cost constraints.
 
 Now, that narrows things down really-really well as the industry has provided some solutions that meet this criteria 
 over the years and the following are the two main players
-- **Xsl Formatting Objects** -- _A markup language for XML document formatting that is most often used to generate PDF files.__
+- **Xsl Formatting Objects** -- _A markup language for XML document formatting that is most often used to generate PDF files._
 
 - **CSS Paged Media** -- _CSS module specifies how pages are generated and laid out to hold fragmented content in a paged presentation (XHTML + CSS)._
 
-These are both industry accepted standards that are completely agnostic of implementation technology, and are supported by a variety of solutions – free, open source, & paid for.__
+These are both industry accepted standards that are completely agnostic of implementation technology, and are supported 
+by a variety of solutions – free, open source, & paid-for.
 
 And both of these provide a templating language that is a purely declarative markup language.  Therefore, we are free 
 to use any templating technology we want including, but not limited to: Razor Templating in .Net, XSLT, JSP, JavaScript 
 based templating (e.g. React, VueJS) in NodeJS, etc.  As long as it’s capable of rendering well-formed markup output 
 (XHTML + CSS, or Xml).
 
-The key benefits is simply that we have low risk of being limited by templating language. And, we are free to develop 
+The key benefit is simply that we have low risk of being limited by templating language. We are free to develop 
 a robust data model separate from the templating presentation – which means that half of the process doesn’t change 
 if we need to change the presentation logic, layer, code, or even technology being used.  
 
 We achieve all the numerous benefits of known best practices for web development such as MVC, MVP, MVVM (all 
-enabling separation of Model data from Presentation) when rendering printable reports. This is great for flexibility 
-to remain congruent with existing technology stack(s) in use and for long term technology supportability/maintainability.
+enabling separation of Model data from Presentation) when rendering printable reports. This is great for 
+developer productivity and flexibility to remain congruent with existing technology stack(s) in use, as well 
+as for long term technology supportability/maintainability.
 
 #### CSS Paged Media:
 CSS Paged Media is the most modern (as in nearly bleeding edge) approach.  I say that because the spec. is still 
@@ -77,7 +79,7 @@ Now I know what you Front End friendly developers are thinking . . . surely CSS 
 Yes, it’s the more modern of the two, but there are some additional facts to consider before assuming that it is better
 for all environments (or teams).  
 
-There are some great paid for options, but the free open source solution is and not as compliant with the spec. and 
+There are some great paid-for options, but the free open source solution is and not as compliant with the spec. and 
 uses some proprietary syntax for certain layout aspects, etc..
 
 In addition, the CSS can become extremely complex for layouts – as in thousands of lines of CSS.  Thereby requiring 
@@ -125,7 +127,7 @@ Based on my own research, this is a non-exhaustive list of the prevalent solutio
    - Based on an old -- but functional -- version of Apache FOP; no longer updated/supported.
    - Functional (moderate) compliance with XSL-FO spec.
 
-For XSL-FO you have similar options for the paid for solutions, as well as a long-standing reliable open source option 
+For XSL-FO you have similar options for the paid-for solutions, as well as a long-standing reliable open source option 
 from Apache.  The Apache FOP option has been included in many other ports, frameworks, wrappers, etc. over the years to 
 because it offers the greater control of PDF layout and rendering needed.
 
