@@ -25,7 +25,7 @@ However, we can greatly simplify the set of options by narrowing it down via a s
 that are critical for specific use cases.  In doing so, we can learn a lot about what makes a good report rending 
 option vs the pitfalls of many of the less optimal choices.
 
-For now, I am going to focus on Pdf rendering as it is still the *king of the hill* when it comes to portable and 
+For now, I am going to focus on PDF rendering as it is still the *king of the hill* when it comes to portable and 
 printable file formats that are universally viewable across machines & devices (computers, phones/tablets, operating systems, etc.).
 
 In my experience, here is a non-exhaustive list of valuable criteria for consideration (esp. for technology selection):
