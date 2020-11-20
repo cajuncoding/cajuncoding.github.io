@@ -33,10 +33,15 @@ over the years and the following are the two main players
 
 - **CSS Paged Media** -- _CSS module specifies how pages are generated and laid out to hold fragmented content in a paged presentation (XHTML + CSS)._
 
-These are both industry accepted standards that are completely agnostic of implementation technology, and are supported 
-by a variety of solutions – free, open source, & paid-for.
+- **Proprietary/Specialized Markup Solutions** -- _There are other options that meet our goals, but with their own specialized markup languages and rending solutions._
 
-And both of these provide a templating language that is a purely declarative markup language.  Therefore, we are free 
+_XSL-FO_ & _CSS Paged Media_ are both industry accepted standards that are completely agnostic of implementation technology, and are supported 
+by a variety of solutions – free, open source, & paid-for. The other solutions are proprietary or specialized, though there are open source options
+that fall into this bucket as well (e.g. [JasperReports](https://en.wikipedia.org/wiki/JasperReports)).  However, since those are very specialized
+I would gravitate to the first two industry specification based solutions first, unless there was a compelling requirement that was met
+by one of the proprietary/specialized solutions.
+
+The kicker here is that the best solutions provide for a templating language that is a purely declarative markup language.  Therefore, we are free 
 to use any templating technology we want including, but not limited to: Razor Templating in .Net, XSLT, JSP, JavaScript 
 based templating (e.g. React, VueJS) in NodeJS, etc.  As long as it’s capable of rendering well-formed markup output 
 (XHTML + CSS, or Xml).
@@ -149,7 +154,14 @@ but that also mitigates some of the value proposition of CSS.
 
 ### Conclusions:
 
-So if you have a very cutting edge environment, and your use-cases or requirements will truly get value from the increible power 
+If there is a very (_I mean very_) compelling requirement and/or use-case that is met particulalarly well 
+([see #6 in the prior post](/2020-11-17-pdf-reports-part1-how-hard-can-it-be)) 
+by a specialized solution that is also great at handling _printable media_ ([see #2 & #3](/2020-11-17-pdf-reports-part1-how-hard-can-it-be)).
+Or if you already have that solution in your technology stack/landscape, then one of the specialized options, such as JasperReports, might be 
+a good solution for your environment. However, since they are very specialized I would gravitate to one of the following 
+options for several reasons, including the fact that they are based on industry standard specification(s).
+
+Now, if you have a very cutting edge environment, and your use-cases or requirements will truly get value from the increible power 
 of CSS (likely with a paid license product). And you have a lot of front-end development expertise on the team that is 
 willing to work with the back-end team to develop a build process and workflow for developing and managing report templates.
 Then CSS Paged Media is an awesome spec. with some powerful solution options that are capable of rending high quality 
