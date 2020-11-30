@@ -23,7 +23,7 @@ and other important considerations for implementing PDF Reporting in today's mod
 When rendering reports from a web application, there are more options and technologies available than can be counted. 
 However, we can greatly simplify the set of possible solutions, we should even consider, by narrowing it down via a 
 set of good practices and criteria that are critical for specific use cases.  In doing so, we can learn a lot about what 
-makes a good report rending option vs the pitfalls of many of the less optimal choices.
+makes a good report rendering option vs the pitfalls of many of the less optimal choices.
 
 For now, I am going to focus on PDF rendering as it is still the *king of the hill* when it comes to portable and 
 printable file formats that are universally viewable across machines & devices (computers, phones/tablets, operating systems, etc.).
