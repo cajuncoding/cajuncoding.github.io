@@ -58,7 +58,7 @@ are used is still no control over the concept of a page; you must accept how the
 output and break/roll content over into pages.  And you cannot, in a very controlled manner, define a header/footer. 
 
 And, for now we are ignoring the additional complexity that is also inherent in trying to implement this in a scalable and 
-reliable way ([as many have ](https://medium.com/compass-true-north/go-service-to-convert-web-pages-to-pdf-using-headless-chrome-5fd9ffbae1af)). 
+reliable way ([as others have tried](https://medium.com/compass-true-north/go-service-to-convert-web-pages-to-pdf-using-headless-chrome-5fd9ffbae1af)). 
 Now, if the use-case is speficially to convert Html to PDF for storage or snapshots to meet 
 regulatory or compliance requirements then this may be exactly what is needed, but that is an edge use case and should not 
 be conflated with rendering quality print outputs.
