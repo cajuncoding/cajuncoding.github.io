@@ -85,8 +85,8 @@ where all images should be inserted into, or template separate secrions and merg
 So we can conclude this discussion by saying that for quality report rendering a templating approach is critical.
 
 ### 4. Is the engine or the templating language proprietary or is it an open standard?
-Now that we understand the value of templating we can start to value whey nearly all reporting engines focused on printable 
-reports (e.g. Crystal Reports, SQL Server Reporting Services, JasperReports, etc.) all have a designer.  It was to provide 
+Now that we understand the value of templating we can start to value why nearly all reporting engines that are focused on printable 
+reports (e.g. Crystal Reports, SQL Server Reporting Services, JasperReports, etc.) all have a "report designer".  It was to provide 
 this separation of data from presentation.
 
 The issue we are now focused on is the nature of the templating engine and its capabilities.  On the positive side, proprietary 
