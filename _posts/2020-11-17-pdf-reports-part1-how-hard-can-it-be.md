@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-title: PDF Reporting from Web Apps, How hard can it be?
+title: 'PDF Reporting from Web Apps, How hard can it be?'
 subtitle: 'Part 1: Considerations for a robust PDF or Web reporting solution?'
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: /assets/img/pdf-icon.png
@@ -49,13 +49,12 @@ Viewport (screen size) that displays a section of that infinite canvas.
 
 This is in sharp contrast to printed outputs that revolve around the “page” concept where content must fit on a single page or 
 it will roll over the next page; referred to as paged-media. Pages may have varying orientations and sizes but they are not 
-infinite.  In fact, pages are highly controllable and may include repeatable content on each page such as header, footers, etc.
-Trying to make a web layout fit into a printable layout is like trying to put a square peg into. A round hole. 
+infinite.  In fact, pages are highly controllable and may include repeatable content on each page such as header, footers, etc. These concepts simply do not exist in web page latouts. Thats why attempts to make a web layout fit into a printable layout is like trying to put a square peg into a round hole; sure a small enough square peg can be used, but its never going to be a good fit.
 
-It can work in some cases but it’s never optimal and very often will have poor results.  I’m sure you’ve noticed how the 
-vast majority of web pages look printed (e.g. Print Preview) is used in the browser.  Even when specialized CSS Print Stylesheets 
-are used is still no control over the concept of a page; you must accept how the chosen browser engine chooses to render the 
-output and break/roll content over into pages.  And you cannot, in a very controlled manner, define a header/footer. 
+It can work in some cases but it’s never optimal and very often will have poor results.  I’m sure you’ve noticed how the vast majority of web pages look when 
+printed in the browser (e.g. Print Preview). Even when specialized CSS Print Stylesheets 
+are used, there is still no control over the concept of a page; you must accept how the chosen browser engine chooses to render the 
+output and break or roll content over into pages.  And you cannot, in a very controlled manner, define a header/footer. 
 
 And, for now we are ignoring the additional complexity that is also inherent in trying to implement this in a scalable and 
 reliable way ([as others have tried](https://medium.com/compass-true-north/go-service-to-convert-web-pages-to-pdf-using-headless-chrome-5fd9ffbae1af)). 
@@ -169,5 +168,3 @@ Any solution that has both paid and/or open source options that are robust enoug
 ## Where does that leave us?
 
 [In the next post](/2020-11-18-pdf-reports-part2-ok-where-does-that-leave-us) we will take a deeper look into where this leaves us...
-
-
