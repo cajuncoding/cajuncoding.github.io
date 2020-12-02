@@ -53,13 +53,13 @@ For me, these are some of the core capabilities that a budgeting platform needs 
  - Provide an easy & efficient way to allocate these transactions to my budget (e.g. help me finish, and don't annoy me while doing it)
    - *Memory leaks that force me to refresh my browser to keep working disqualifiees Mvelopes from being easy or efficient.*
  - Allow me to control how many budget items and how granular I want to manage my budget.
-   - *Why so much scrollimg Mvelopes?*
+   - *Why so much scrolling Mvelopes?*
  - Help me track expenses and costs of a spicific budget item over time (e.g. Coffee Budget) so that I can look back on it retrospectively.
    - *This is extremely useful for reflecting on things like Vacation costs that we budget for individually and want to reflect on later*.
  - Help me pro-actively keep my costs in check; I need to be able to see, quickly/easily, anytime a budget item is at risk or over budget for a month.
    - A tangential benefit/need here is also to quickly help me identify any risky/fraudulent/incorrect charges to any of my accounts.
      - *Because in today's world this has & will happen eventually.*
- - Allow me to search through all my transactions to efficiently find random purchases for review.
+ - Allow me to search through all my transactions to efficiently find very specific purchases to review.
  - And finally let me Export my transactions and budget details.
    - *Because everything should be backed-up, and I want to have a copy of my own data.*
 
