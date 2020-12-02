@@ -58,31 +58,31 @@ output and break or roll content over into pages.  And you cannot, in a very con
 
 And, for now we are ignoring the additional complexity that is also inherent in trying to implement this in a scalable and 
 reliable way ([as others have tried](https://medium.com/compass-true-north/go-service-to-convert-web-pages-to-pdf-using-headless-chrome-5fd9ffbae1af)). 
-Now, if the use-case is speficially to convert Html to PDF for storage or snapshots to meet 
+Now, if the use-case is specifically to convert Html to PDF for storage or snapshots to meet 
 regulatory or compliance requirements then this may be exactly what is needed, but that is an edge use case and should not 
 be conflated with rendering quality print outputs.
 
-Therefore, normal browser-based rendering and use of browser engines such as Chrome to generate Pdf’s from normal Html & CSS 
+Therefore, normal browser-based rendering and use of browser engines such as Chrome to generate PDF’s from normal Html & CSS 
 is an inherently flawed process.
 
 ### 3. Is a Templating approach to rendering supported?
 Many solutions revolve around a PDF API approach that requires generating, manipulating, and outputting data into a PDF 
-document via code.  This approach is not only exhaustive & error prone, but it’s also extremely constraining and will 
+document via code.  This approach is not only extremely complex & error prone, but it’s also extremely constraining and will 
 require massively greater amount of effort for a development team to deliver.  I refer to this as a code-based approach 
-and is analogous to a coordinate based approach to creating output.
+and is analogous to a coordinate based approach to placing letters, text, etc. on a page to create the PDF output.
 
 However, rendering PDF outputs using a templated approach that provides great separation between presentation (the template) 
 and data (the Model) is far more flexible and productive.  And, it brings to the forefront all the well known and well 
 documented benefits of separating data from presentation that is prolific in all other aspects of web development 
 (e.g. MVC, MVP, MVVM, etc.).
 
-Now there are very valid use-cases for the code-based processing of Pdfs, but this is generally most beneficial for 
-pre-processing and post-processing PDF files and not the raw creation of quality reports as Pdf.  For example, if images or 
-separate PDF files need to be merged into a Report, then that is a fantastic use-case for a code based library to work with 
-while maintaining all the flexibility and control of layout within the template (e.g. you can render placeholder(s) out 
-where all images should be inserted into).
+Now there are very valid use-cases for the code-based processing of PDFs, but this is generally most beneficial for 
+pre-processing and post-processing PDF files and not the raw creation of quality reports as PDF.  For example, if images or 
+separate PDF files need to be merged into a Report, then that is a fantastic use-case for a code based library to work with, as a post-processing step,
+while maintaining all the flexibility and control of layout within a  template approach (e.g. you might render placeholder(s) out 
+where all images should be inserted into, or template separate secrions and merge in a followup step).
 
-So we can wrap this by saying that for quality report rendering a templating approach is critical.
+So we can conclude this discussion by saying that for quality report rendering a templating approach is critical.
 
 ### 4. Is the engine or the templating language proprietary or is it an open standard?
 Now that we understand the value of templating we can start to value whey nearly all reporting engines focused on printable 
