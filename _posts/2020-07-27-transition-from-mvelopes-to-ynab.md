@@ -3,8 +3,8 @@ published: true
 layout: post
 title: My migration from Mvelopes to YNAB!
 subtitle: >-
-  A Rant on my Love-Hate relationship with Mvelopes - hoping "You Need A
-  Budget" (YNAB) can return my budgeting sanity!
+  A Rant on my Love-Hate relationship with Mvelopes - hoping "You Need A Budget"
+  (YNAB) can return my budgeting sanity!
 cover-img: /assets/img/crawfish-banner.jpg
 thumbnail-img: >-
   /assets/img/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv/mvelopes-to-ynab-thumbnail.png
@@ -26,7 +26,7 @@ Finicity dropped the ball on v5 in more ways than I can count . . . occasionally
   - I, still to this day, have to hit F5 to reload after dragging/dropping 10+ transactions.
   - The **Planning -> Income** panel has randomly forgotten or lost my income amounts and payment dates on multiple occasions.
   - Making a change to any income amount (**Planning -> Income**) causes ALL related funding plan details, from that income, to be deleted without warning; click over to the Monthly Funding tab and lots of data is just gone.
-    - *I've minimized my pain from this with some hackery that [I'll share here...](./2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv%20copy.md)*
+    - *I've minimized my pain from this with some hackery that [I'll share here...](/2020-07-27-mvelopes-script-to-export-funding-plan-details-as-csv)*
 - What's that error about 24 characters? You won't let me type more than **24 characters** into any Title or Description field anymore?
     - *This one item drives me crazier than ANYTHING! Hardly any useful titles can be put into a paltry 24 character field!*
 - Mvelopes v5 is still missing TONS of features... its not even remotely close to having feature parity with v4.
