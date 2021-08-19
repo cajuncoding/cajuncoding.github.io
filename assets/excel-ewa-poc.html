@@ -23,13 +23,13 @@
 	alert("BBernard - Running EWA Script...");
 
 		// Run the Excel load handler on page load.
-		// if(window.attachEvent) {
-			// window.attachEvent("onload", loadEwaOnPageLoad);
+		if (window.attachEvent)
+		{
 			window.attachEvent("onload", loadEwaOnPageLoad);
-		// } 
-		// else {
-			// window.addEventListener("DOMContentLoaded", loadEwaOnPageLoad, false);
-		// }
+		} else
+		{
+			window.addEventListener("DOMContentLoaded", loadEwaOnPageLoad, false);
+		}
 
 		function loadEwaOnPageLoad() {
 			var props = {
