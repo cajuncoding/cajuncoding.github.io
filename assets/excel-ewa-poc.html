@@ -55,6 +55,11 @@
 			{
 				// Use the AsyncResult.getEwaControl() method to get a reference to the EwaControl object
 				ewa = asyncResult.getEwaControl();
+
+
+				alert("BBernard - Setting window.MyEwa");
+				window.MyEwa = ewa;
+				
 			}
 			else
 			{
@@ -62,8 +67,6 @@
 			}
 		}    
 		
-	alert("BBernard - Setting window.MyEwa");
-		window.MyEwa = ewa;
 	</script>
 </body>
 </html>
