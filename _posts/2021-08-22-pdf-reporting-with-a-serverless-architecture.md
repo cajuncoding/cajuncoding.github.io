@@ -4,8 +4,8 @@ layout: post
 title: 'PDF Reporting with a Serverless Architecture'
 subtitle: 'Robust and Flexible Pdf Reporting with ApacheFOP.Serverless'
 cover-img: /assets/img/crawfish-banner.jpg
-thumbnail-img: /assets/img/pdf-icon.png
-share-img: /assets/img/pdf-icon.png
+thumbnail-img: /assets/img/apache-fop-pdf-icon.png
+share-img: /assets/img/apache-fop-pdf-icon.png
 tags:
   - azure-functions
   - serverless
@@ -114,8 +114,8 @@ in action!  In addition this project is based on libraries that I've also shared
 
 
 ### Final Thoughts:
-Some recent conversation on GitHub has helped me to realize that Visual Studio code can run Java projects, so I'll soon integrate a project setup into ApacheFOP.Serverless for those that don't want
-to have to rely on IntelliJ IDEA as the Java IDE for running ApacheFOP.Serverless locally.  
+Some recent conversation on GitHub has helped me to realize that Visual Studio Code can run Java projects (Nice!!!), so I'll soon integrate a project setup into _ApacheFOP.Serverless_ for those that don't want
+to have to rely on IntelliJ IDEA (*which is still the best Java IDE available*) as the Java IDE for running & publishing _ApacheFOP.Serverless_ locally.  
 
 
 I truly hope that it helps many others out!
