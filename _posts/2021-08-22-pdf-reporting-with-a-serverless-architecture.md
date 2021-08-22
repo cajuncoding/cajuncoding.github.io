@@ -56,7 +56,7 @@ named [ApacheFOP.Serverless](https://github.com/cajuncoding/ApacheFOP.Serverless
 
 Let's briefly touch on the overall architecture. The concept is simple if you're familiar with services oriented development.  With services you get abstraction and flexibility. Well in this case
 we want to take advantage of this flexibiliy to abstract away the details of how the XSL-FO is rendered to a Binary PDF, and all our .Net application should be concerned with is how it can use a client
-to send the XSL-FO markup and receive a valid PDF binary in return by calling an external services -- in the case of ApacheFOP.Serverless it's a REST POST request request made containing the Xsl-FO markup.
+to send the XSL-FO markup and receive a valid PDF binary in return by calling an external service API -- in the case of **_ApacheFOP.Serverless_** it's a REST API (POST) request containing the Xsl-FO markup.
 
 The PDF Rendering Service is able to facilitate this abstraction because Azure Functions allows us to run any Java application.  So all we need to do is expose ApacheFOP functionality via a REST endpoint,
 and enrich the API by providing any additional functionality we want (e.g. support for Zip Compression requests/responses, Debugging capabilities, etc.)
@@ -80,7 +80,6 @@ And Voila . . . we have a service that can be called to consistently render PDF 
 
 #### Ok, how do I get this running for myself?
 To get this up and running in your own Azure account, there are details on the [GitHub page here!](https://github.com/cajuncoding/ApacheFOP.Serverless#getting-started)
-
 
 ### Code Design for PDF Templating
 As mentioned earlier, the key to rendering this PDF is now abstracted away into the PDF rendering service.  So now we are free to focus on our business requirements, and how
@@ -109,14 +108,77 @@ in action!  In addition this project is based on libraries that I've also shared
 2. A Razor Templating Library for Asp.Net MVC Framework (not .Net Core): [PdfTemplating.XslFO.Razor.AspNetMvc](https://www.nuget.org/packages/PdfTemplating.XslFO.Razor.AspNetMvc/)
    - Eventually I plan to migrate some of my clients to .Net Core in which case I'll be sure to share out any useful approaches to using Razor Templating to generate markup.
 
+*Note: I'll likely post another blog article on how easy the library makes it to render Razor in-memory in an ASP.Net MVC app (.Net Core is not yet implemented but it's certainly feasible).*
 #### ApacheFOP.Serverless REST Client (.Net Standard)
-- Here is a ready to use REST Client for _ApacheFOP.Serverless_ in .Net: [PdfTemplating.XslFO.Render.ApacheFOP.Serverless](https://www.nuget.org/packages/PdfTemplating.XslFO.Render.ApacheFOP.Serverless/)
+And most importantly (for the focus of this article), here is a ready to use REST Client for **_ApacheFOP.Serverless_ in .Net**: [PdfTemplating.XslFO.Render.ApacheFOP.Serverless](https://www.nuget.org/packages/PdfTemplating.XslFO.Render.ApacheFOP.Serverless/)
 
+All the hard work of interacting with *ApacheFOP.Serverless*, and it's advanced options for compression, debugging outputs from ApachFOP, etc. are all nicely encapsulated in the 
+**_ApacheFOPServerlessPdfRenderService_** class -- a .Net Standard 2.0 library.
+
+##### Code Snippet using the client available on Nuget:
+
+I've talked about how easy this can be, but of course, I'd be amiss if I didn't provide at least some code here in the article to back up my assertions.  So this is the abstraction/wrapper class that 
+you'd add to your project to easily interact with the *ApacheFOP.Serverless* service. As you can see, the Nuget client makes it very straight-forward . . . and it just works!  But even if you didn't
+want to take on the dependency, there's really not alot going on as it's fully REST based, so you could definitely create your own client using [RESTSharp](https://restsharp.dev/) or [Flurl](https://flurl.dev/) (*my new Favorite .Net REST Client & Url Builder*)!
+
+**And, there's more example code along with a fully functioning implementation here in demo [_PdfTemplating.XslFO_ project!](https://github.com/cajuncoding/PdfTemplating.XslFO)**
+
+```csharp
+using System;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+using PdfTemplating.XslFO.ApacheFOP.Serverless;
+using PdfTemplating.XslFO.Render.ApacheFOP.Serverless;
+
+namespace MyApp.API.Reports.PdfRenderers
+{
+    public class ApacheFopServerlessClient
+    {
+        public Uri ApiUri { get; }
+        public string SecurityToken { get; }
+
+        //The input Uri should be configuration value read/injected that point to a valid instance of ApacheFOP.Serverless 
+        //  running in Azure; and its' associated Azure Function Security Token.
+        public ApacheFopServerlessClient(Uri apacheFOPServerlessApiUri, string securityToken)
+        {
+            ApiUri = apacheFOPServerlessApiUri ?? throw new ArgumentNullException(nameof(apacheFOPServerlessApiUri));
+            SecurityToken = securityToken ?? throw new ArgumentNullException(nameof(securityToken));
+        }
+
+        //NOTE: To ensure that the Xsl-FO Markup is well-formed we take in a valid XDocument!
+        public async Task<ApacheFOPServerlessResponse> RenderXslFOToPdfAsync(XDocument xslFODoc)
+        {
+            //************************************************************************************************
+            //Execute the Transformation of the XSL-FO source to Binary Pdf via ApacheFOP Serverless Rendering
+            //************************************************************************************************
+            var options = CreateOptions();
+            var xslFOPdfRenderer = new ApacheFOPServerlessPdfRenderService(xslFODoc, options);
+
+            var renderResponse = await xslFOPdfRenderer.RenderPdfAsync();
+            return renderResponse;
+        }
+
+        protected virtual ApacheFOPServerlessXslFORenderOptions CreateOptions()
+        {
+            var options = new ApacheFOPServerlessXslFORenderOptions(ApiUri)
+            {
+                EnableGzipCompressionForRequests = true,
+                EnableGzipCompressionForResponses = true
+            };
+
+            //Initialize the Security Token for Azure Functions via QueryString:
+            options.QuerystringParams["code"] = this.SecurityToken;
+
+            return options;
+        }
+
+    }
+}
+```
 
 ### Final Thoughts:
 Some recent conversation on GitHub has helped me to realize that Visual Studio Code can run Java projects (Nice!!!), so I'll soon integrate a project setup into _ApacheFOP.Serverless_ for those that don't want
 to have to rely on IntelliJ IDEA (*which is still the best Java IDE available*) as the Java IDE for running & publishing _ApacheFOP.Serverless_ locally.  
-
 
 I truly hope that it helps many others out!
 
