@@ -54,7 +54,7 @@ named [ApacheFOP.Serverless](https://github.com/cajuncoding/ApacheFOP.Serverless
 
 ### The Architecture
 
-Let's briefly touch on the overall architecture. The concept is simple, if you're familiar with services oriented development.  With services you get abstraction and flexibility. Well in this case
+Let's briefly touch on the overall architecture. The concept is simple if you're familiar with services oriented development.  With services you get abstraction and flexibility. Well in this case
 we want to take advantage of this flexibiliy to abstract away the details of how the XSL-FO is rendered to a Binary PDF, and all our .Net application should be concerned with is how it can use a client
 to send the XSL-FO markup and receive a valid PDF binary in return by calling an external services -- in the case of ApacheFOP.Serverless it's a REST POST request request made containing the Xsl-FO markup.
 
