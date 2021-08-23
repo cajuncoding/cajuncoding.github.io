@@ -136,6 +136,7 @@ using [RESTSharp](https://restsharp.dev/) or [Flurl](https://flurl.dev/) (*my ne
 <br />
 
 ###### Usage:
+
 ```csharp
   //Initialize configuration details for Azure Function (e.g. Web.config)
   //NOTE: The Azure Function Base/Host Url & Security Token should be provided; any all query-string params will be retained...
@@ -157,6 +158,7 @@ using [RESTSharp](https://restsharp.dev/) or [Flurl](https://flurl.dev/) (*my ne
 <br />
 
 ###### ApacheFopServerlessClient (helper abstraction class):
+
 ```csharp
 using System;
 using System.Threading.Tasks;
