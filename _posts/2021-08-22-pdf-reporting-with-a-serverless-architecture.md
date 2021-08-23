@@ -133,8 +133,9 @@ you'd add to your project to easily interact with the *ApacheFOP.Serverless* ser
 
 But even if you didn't want to take on the dependency, there's really not alot going on as it's fully REST based, so you could definitely create your own client 
 using [RESTSharp](https://restsharp.dev/) or [Flurl](https://flurl.dev/) (*my new Favorite .Net REST Client & Url Builder*)!
-<br />
 
+&nbsp;  
+&nbsp;  
 ###### Usage:
 
 ```csharp
@@ -155,8 +156,8 @@ using [RESTSharp](https://restsharp.dev/) or [Flurl](https://flurl.dev/) (*my ne
   byte[] pdfBytes = renderResponse.PdfBytes;
   string eventLogDebugOutput = renderResponse.EventLogText;
 ```
-<br />
-
+&nbsp;  
+&nbsp;  
 ###### ApacheFopServerlessClient (helper abstraction class):
 
 ```csharp
