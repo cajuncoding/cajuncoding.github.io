@@ -132,6 +132,25 @@ you'd add to your project to easily interact with the *ApacheFOP.Serverless* ser
 But even if you didn't want to take on the dependency, there's really not alot going on as it's fully REST based, so you could definitely create your own client 
 using [RESTSharp](https://restsharp.dev/) or [Flurl](https://flurl.dev/) (*my new Favorite .Net REST Client & Url Builder*)!
 
+###### Usage:
+```csharp
+  //Initialize configuration details for Azure Function (e.g. Web.config)
+  Uri azureFunctionHostUri = new Uri("https://apachefop-serverless.azurewebsites.net/"); //Azure Function Host Url
+  string azureFunctionToken = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
+  //Render your Markup however you like...
+  XDocument xslFODoc = RenderXslFOMarkup(...);
+
+  //NOw, with the above client you can access the Binary Pdf or other debugging details
+  //  by executing the Transformation of the XSL-FO source to Binary Pdf via Apache FOP Service...
+  var apacheFopServerlessClient = new ApacheFopServerlessClient(azureFunctionUri, azureFunctionToken);
+  var renderResponse = await apacheFopServerlessClient.RenderXslFOToPdfAsync(xslFODoc);
+
+  //Process the results however you like...
+  byte[] pdfBytes = renderResponse.PdfBytes;
+  string eventLogDebugOutput = renderResponse.EventLogText;
+```
+###### ApacheFopServerlessClient (helper abstraction class):
 ```csharp
 using System;
 using System.Threading.Tasks;
