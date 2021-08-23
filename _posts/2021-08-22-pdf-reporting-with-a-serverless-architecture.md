@@ -49,7 +49,7 @@ But, as things have evolved the advent of cloud services has opened doors for ac
 for various technology languages including: .Net, Java, NodeJS, etc.!
 
 So now on my newest projects I've been leveraging mini-services (dare I say micro-services) and serverless architectures, whereby PDF Reporting has, and will continue to be, a very critical requirement/capability. 
-Now I've finally had the time to flush out the details of how to elegantly integrate the latest-and-greatest versions of ApacheFOP with .NET.... **the result of which I've shared an open source project 
+Now I've finally had the time to flush out the details of how to elegantly integrate the latest-and-greatest versions of ApacheFOP with .NET.... **the result of which I've shared in an open source project 
 named [ApacheFOP.Serverless](https://github.com/cajuncoding/ApacheFOP.Serverless)!**
 
 ### The Architecture
