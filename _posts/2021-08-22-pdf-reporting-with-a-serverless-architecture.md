@@ -135,7 +135,6 @@ But even if you didn't want to take on the dependency, there's really not alot g
 using [RESTSharp](https://restsharp.dev/) or [Flurl](https://flurl.dev/) (*my new Favorite .Net REST Client & Url Builder*)!
 
 &nbsp;  
-&nbsp;  
 ###### Usage:
 
 ```csharp
@@ -156,7 +155,7 @@ using [RESTSharp](https://restsharp.dev/) or [Flurl](https://flurl.dev/) (*my ne
   byte[] pdfBytes = renderResponse.PdfBytes;
   string eventLogDebugOutput = renderResponse.EventLogText;
 ```
-&nbsp;  
+
 &nbsp;  
 ###### ApacheFopServerlessClient (helper abstraction class):
 
