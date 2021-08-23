@@ -137,7 +137,8 @@ using [RESTSharp](https://restsharp.dev/) or [Flurl](https://flurl.dev/) (*my ne
 ###### Usage:
 ```csharp
   //Initialize configuration details for Azure Function (e.g. Web.config)
-  Uri azureFunctionHostUri = new Uri("https://apachefop-serverless.azurewebsites.net/"); //Azure Function Host Url
+  //  - Azure Function Host Url & Security Token...
+  Uri azureFunctionHostUri = new Uri("https://apachefop-serverless.azurewebsites.net/api/apache-fop/xslfo");
   string azureFunctionToken = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
 
   //Render your Markup however you like...
