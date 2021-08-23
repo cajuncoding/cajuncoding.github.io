@@ -25,3 +25,8 @@ img.center, div.center {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+/*Fix Margins around Code Snippets*/
+div.highlighter-rouge {
+	margin: 1.875rem 0;
+}
