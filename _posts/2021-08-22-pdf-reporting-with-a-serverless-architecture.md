@@ -90,7 +90,6 @@ templating approach which has garnered alot more favor by my teams -- and I've g
 provide the full power of C# into any template).
 
 Again, the concept is not rocket science if you've ever worked with any form of MVC, MvvM, or just decoupling of your Model from your presentation:
-<img src="../assets/img/2021-08-22-pdf-reporting-with-a-serverless-architecture/xslfo-template-rendering-conceptual-diagram.png" class="fullsize" data-zoomable />
 
 1. Retrieve your Data and build a well-formed model (C# class)...
    - This is when you may pre-process/pre-calculate lots of details that you do not want to have squirrelled away throughout your presentation logic!
@@ -98,10 +97,12 @@ Again, the concept is not rocket science if you've ever worked with any form of 
 3. Now Send that markup to the PDF Service to render the PDF Binary...
 4. Do whatever you like with your PDF binary :-)
 
-### .Net Client Available via Nuget
+<img src="../assets/img/2021-08-22-pdf-reporting-with-a-serverless-architecture/xslfo-template-rendering-conceptual-diagram.png" class="fullsize" data-zoomable />
 
-For those that are using .Net, I've provided a fully functioning application that demonstrates not only PDF Templating based approach in .Net, but also demonstrates the full use of _ApacheFOP.Serverless_
-in action!  In addition this project is based on libraries that I've also shared in Nuget to provide a ready-to-use .Net C# Client for _ApacheFOP.Serverless_:
+### .Net Client Available via Nuget
+To help make things even easier for all of my projects, for those that are using .Net, I've also shared a fully functioning application that demonstrates not only PDF Templating 
+based approach in .Net, but also demonstrates the full use of _ApacheFOP.Serverless_ in action!  And, that project provides a ready-to-use .Net C# Client for _ApacheFOP.Serverless_
+and makes this readily available as Nuget packages!
 
 #### Rendering XSL-FO
 1. An XSLT Client that includes some useful helpers in Nuget: [PdfTemplating.XslFO.Xslt](https://www.nuget.org/packages/PdfTemplating.XslFO.Xslt/)
