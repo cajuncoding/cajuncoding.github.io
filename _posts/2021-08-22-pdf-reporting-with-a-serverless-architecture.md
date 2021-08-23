@@ -65,7 +65,7 @@ Here's the Conceptual diagram to help clarify any questions:
 <img src="../assets/img/2021-08-22-pdf-reporting-with-a-serverless-architecture/apache-fop-serverless-conceptual-architecture.png" class="fullsize" data-zoomable />
 
 ##### Tangent -- Why Serverless with Azure Functions?
-There are many reasons why Servless architectures are great, and there are some cons too.... but that's a whole other topic that I won't get into now.  But as a project structure, Azure Functions are very flexible
+There are many reasons why servless architectures are great, and there are some cons too... but that's a whole other topic that I won't get into now.  But as a project structure, Azure Functions are very flexible
 and can be deployed directly to Azure cloud in many different ways.  With the latest version of Azure Functions, not only can you deploy directly to an Azure Function Serverless app, but you can also
 deploy the project as a containerized artifact, etc. So you have alot of control over the deployment style & infrastructure.  So, effectively Microsoft has empowered you to choose your own approach 
 which lets you take advantage of or mitigate whatever pros/cons you wish.
