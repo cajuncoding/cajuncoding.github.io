@@ -99,18 +99,26 @@ Again, the concept is not rocket science if you've ever worked with any form of 
 
 <img src="../assets/img/2021-08-22-pdf-reporting-with-a-serverless-architecture/xslfo-template-rendering-conceptual-diagram.png" class="fullsize" data-zoomable />
 
-### .Net Client Available via Nuget
-To help make things even easier for all of my projects, for those that are using .Net, I've also shared a fully functioning application that demonstrates not only PDF Templating 
-based approach in .Net, but also demonstrates the full use of _ApacheFOP.Serverless_ in action!  And, that project provides a ready-to-use .Net C# Client for _ApacheFOP.Serverless_
-and makes this readily available as Nuget packages!
+#### Demo Project PdfTemplating.XslFO
 
-#### Rendering XSL-FO
-1. An XSLT Client that includes some useful helpers in Nuget: [PdfTemplating.XslFO.Xslt](https://www.nuget.org/packages/PdfTemplating.XslFO.Xslt/)
-2. A Razor Templating Library for Asp.Net MVC Framework (not .Net Core): [PdfTemplating.XslFO.Razor.AspNetMvc](https://www.nuget.org/packages/PdfTemplating.XslFO.Razor.AspNetMvc/)
+I've also shared out a fully functioning demo project named [**_PdfTemplating.XslFO_**!](https://github.com/cajuncoding/PdfTemplating.XslFO)**
+
+This project encompasses more than I'm covering in this article as it includes full demonstrations of creting the XslFO Markup via XSLT or Razor templates, and then 
+rendering the binary PDF using both FO.Net and ApacheFOP.Serverless.
+
+But one of the key elements I do want to highlight is that project provides several libraries that are **available on Nuget** to make everything easier and a bit less complex.
+
+The relevant point for this article is that the project provides a complete demo of _ApacheFOP.Serverless_ in action! And, it also provides a ready-to-use .Net C# REST Client 
+specifically for _ApacheFOP.Serverless_!
+
+##### Rendering XSL-FO markup
+
+I'm not going to go into much detail here, as this is just templating, but since I mentioned the Demo project above using either XSLT or Razor I figured I'd point out that the Nuget Packages are:
+1. An XSLT helper library in Nuget: [PdfTemplating.XslFO.Xslt](https://www.nuget.org/packages/PdfTemplating.XslFO.Xslt/)
+2. A Razor Templating Library (proxy library) for Asp.Net MVC Framework (not .Net Core): [PdfTemplating.XslFO.Razor.AspNetMvc](https://www.nuget.org/packages/PdfTemplating.XslFO.Razor.AspNetMvc/)
    - Eventually I plan to migrate some of my clients to .Net Core in which case I'll be sure to share out any useful approaches to using Razor Templating to generate markup.
-
-*Note: I'll likely post another blog article on how easy the library makes it to render Razor in-memory in an ASP.Net MVC app (.Net Core is not yet implemented but it's certainly feasible).*
-#### ApacheFOP.Serverless REST Client (.Net Standard)
+   - *I'll likely post another blog article on how easy the library makes it to render Razor in-memory in an ASP.Net MVC app (.Net Core is not yet implemented but it's certainly feasible).*
+##### Rendering the Pdf Binary via ApacheFOP.Serverless REST Client (.Net Standard)
 And most importantly (for the focus of this article), here is a ready to use REST Client for **_ApacheFOP.Serverless_ in .Net**: [PdfTemplating.XslFO.Render.ApacheFOP.Serverless](https://www.nuget.org/packages/PdfTemplating.XslFO.Render.ApacheFOP.Serverless/)
 
 All the hard work of interacting with *ApacheFOP.Serverless*, and it's advanced options for compression, debugging outputs from ApachFOP, etc. are all nicely encapsulated in the 
@@ -119,10 +127,10 @@ All the hard work of interacting with *ApacheFOP.Serverless*, and it's advanced 
 ##### Code Snippet using the client available on Nuget:
 
 I've talked about how easy this can be, but of course, I'd be amiss if I didn't provide at least some code here in the article to back up my assertions.  So this is the abstraction/wrapper class that 
-you'd add to your project to easily interact with the *ApacheFOP.Serverless* service. As you can see, the Nuget client makes it very straight-forward . . . and it just works!  But even if you didn't
-want to take on the dependency, there's really not alot going on as it's fully REST based, so you could definitely create your own client using [RESTSharp](https://restsharp.dev/) or [Flurl](https://flurl.dev/) (*my new Favorite .Net REST Client & Url Builder*)!
+you'd add to your project to easily interact with the *ApacheFOP.Serverless* service. As you can see, the **Nuget** client makes it very straight-forward . . . and it just works!  
 
-**And, there's more example code along with a fully functioning implementation here in demo [_PdfTemplating.XslFO_ project!](https://github.com/cajuncoding/PdfTemplating.XslFO)**
+But even if you didn't want to take on the dependency, there's really not alot going on as it's fully REST based, so you could definitely create your own client 
+using [RESTSharp](https://restsharp.dev/) or [Flurl](https://flurl.dev/) (*my new Favorite .Net REST Client & Url Builder*)!
 
 ```csharp
 using System;
