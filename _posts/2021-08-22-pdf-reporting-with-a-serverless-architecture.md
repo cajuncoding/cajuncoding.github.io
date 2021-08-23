@@ -50,7 +50,7 @@ for various technology languages including: .Net, Java, NodeJS, etc.!
 
 So now on my newest projects I've been leveraging mini-services (dare I say micro-services) and serverless architectures, whereby PDF Reporting has, and will continue to be, a very critical requirement/capability. 
 Now I've finally had the time to flush out the details of how to elegantly integrate the latest-and-greatest versions of ApacheFOP with .NET.... **the result of which I've shared in an open source project 
-named [ApacheFOP.Serverless](https://github.com/cajuncoding/ApacheFOP.Serverless)!**
+named [*ApacheFOP.Serverless*](https://github.com/cajuncoding/ApacheFOP.Serverless)!**
 
 ### The Architecture
 
@@ -68,11 +68,11 @@ Here's the Conceptual diagram to help clarify any questions:
 There are many reasons why servless architectures are great, and there are some cons too... but that's a whole other topic that I won't get into now.  But as a project structure, Azure Functions are very flexible
 and can be deployed directly to Azure cloud in many different ways.  With the latest version of Azure Functions, not only can you deploy directly to an Azure Function Serverless app, but you can also
 deploy the project as a containerized artifact, etc. So you have alot of control over the deployment style & infrastructure.  So, effectively Microsoft has empowered you to choose your own approach 
-which lets you take advantage of or mitigate whatever pros/cons you wish.
+which lets you take advantage of, or mitigate, whatever pros/cons you wish.
 
 ##### Running Locally with Full Debugging capability
-In addition, none of this precludes us from running the service locally.  It's really awesome to spin up ApacheFOP.Serverless locally and PostMan/Insomnia, or your live Web App also locally hit the service,
-with live breakpoints inside ApacheFOP.Serverless!
+In addition, none of this precludes us from running the service locally.  It's really awesome to spin up *ApacheFOP.Serverless* locally and PostMan/Insomnia, or your live Web App also locally hit the service,
+with live breakpoints inside *ApacheFOP.Serverless*!
 
 #### The Result:
 And Voila . . . we have a service that can be called to consistently render PDF Binary outputs, but is also highly scalable leveragin the Serverless architecture of Azure Functions.
