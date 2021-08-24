@@ -119,6 +119,7 @@ I'm not going to go into much detail here, as this is just templating, but since
    - Eventually I plan to migrate some of my clients to .Net Core in which case I'll be sure to share out any useful approaches to using Razor Templating to generate markup.
    - *I'll likely post another blog article on how easy the library makes it to render Razor in-memory in an ASP.Net MVC app (.Net Core is not yet implemented but it's certainly feasible).*
 
+<a name="ApacheFopServerlessClient"></a>
 ##### Rendering the Pdf Binary via ApacheFOP.Serverless REST Client (.Net Standard)
 
 And most importantly (for the focus of this article), here is a ready to use REST Client for **_ApacheFOP.Serverless_ in .Net** on Nuget: [PdfTemplating.XslFO.Render.ApacheFOP.Serverless](https://www.nuget.org/packages/PdfTemplating.XslFO.Render.ApacheFOP.Serverless/)
