@@ -73,11 +73,10 @@ deploy the project as a containerized artifact, etc. So you have alot of control
 which lets you take advantage of, or mitigate, whatever pros/cons you wish.
 
 ##### Running Locally with Full Debugging capability
-In addition, none of this precludes us from running the service locally.  It's really awesome to spin up *ApacheFOP.Serverless* locally and PostMan/Insomnia, or your live Web App also locally hit the service,
-with live breakpoints inside *ApacheFOP.Serverless*!
+In addition, none of this precludes us from running the service locally.  It's really awesome to spin up *ApacheFOP.Serverless* locally and use Postman/Insomnia, or your live Web App, also locally to hit the service, with live breakpoints inside *ApacheFOP.Serverless*!
 
 #### The Result:
-And Voila . . . we have a service that can be called to consistently render PDF Binary outputs, but is also highly scalable leveragin the Serverless architecture of Azure Functions.
+And Voila . . . we have a service that can be called to consistently render PDF Binary outputs, but is also highly scalable by leveraging the Serverless architecture of Azure Functions.
 <img src="../assets/img/2021-08-22-pdf-reporting-with-a-serverless-architecture/postman-test-fonts-fo.png" class="fullsize" data-zoomable />
 
 #### Ok, how do I get this running for myself?
