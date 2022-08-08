@@ -115,7 +115,7 @@ specifically for _ApacheFOP.Serverless_!
 ##### Rendering XSL-FO markup
 
 I'm not going to go into much detail here, as this is just templating, but since I mentioned the Demo project above, using either XSLT or Razor, I figured I'd point out that the Nuget Packages are:
-1. An XSLT helper library in Nuget: [PdfTemplating.XslFO.Xslt](https://www.nuget.org/packages/PdfTemplating.XslFO.Xslt/)
+1. An XSLT helper library in Nuget (.NET Standard): [PdfTemplating.XslFO.Xslt](https://www.nuget.org/packages/PdfTemplating.XslFO.Xslt/)
 2. A Razor Templating Library for:
     1. Asp.NET Framework MVC: [PdfTemplating.XslFO.Razor.AspNetMvc](https://www.nuget.org/packages/PdfTemplating.XslFO.Razor.AspNetMvc/)
     2. Asp.NET Core MVC (.NET 5+, etc.): [PdfTemplating.XslFO.Razor.AspNetCoreMvc/](https://www.nuget.org/packages/PdfTemplating.XslFO.Razor.AspNetCoreMvc/)
