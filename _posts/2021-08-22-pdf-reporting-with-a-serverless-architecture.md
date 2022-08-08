@@ -15,6 +15,8 @@ tags:
   - .net
   - apache-fop
 ---
+*Edit: 08/08/2022 Updated with new Asp.NET Core support and links to Nuget Libraries...*
+
 ### Some background on Pdf Reporting in the .Net world...
 For many-many years, I've implemented PDF Reporting solutions with [templating approaches](https://github.com/cajuncoding/PdfTemplating.XslFO) for various clients (enterprises & small businesses) 
 to help them automate their paper processes with dynamic generation of _printable media_ outputs such as: PDF files, invoices, shipping/packaging labels, newletters, etc.
@@ -103,7 +105,7 @@ Again, the concept is not rocket science if you've ever worked with any form of 
 
 I've also shared out a fully functioning demo project named [**_PdfTemplating.XslFO_**!](https://github.com/cajuncoding/PdfTemplating.XslFO)
 
-This project encompasses more than I'm covering in this article, as it includes full demonstrations of creting the XslFO Markup via XSLT or Razor templates, as well as
+This project encompasses more than I'm covering in this article, as it includes full demonstrations of creating the XslFO Markup via XSLT or Razor templates, as well as
 rendering the binary PDF using both FO.Net and ApacheFOP.Serverless.
 
 But one of the key elements I do want to highlight is that project provides several libraries that are **available on Nuget** to make everything easier and a bit less complex.
@@ -113,11 +115,11 @@ specifically for _ApacheFOP.Serverless_!
 
 ##### Rendering XSL-FO markup
 
-I'm not going to go into much detail here, as this is just templating, but since I mentioned the Demo project above using, either XSLT or Razor, I figured I'd point out that the Nuget Packages are:
+I'm not going to go into much detail here, as this is just templating, but since I mentioned the Demo project above, using either XSLT or Razor, I figured I'd point out that the Nuget Packages are:
 1. An XSLT helper library in Nuget: [PdfTemplating.XslFO.Xslt](https://www.nuget.org/packages/PdfTemplating.XslFO.Xslt/)
-2. A Razor Templating Library (proxy library) for Asp.Net MVC Framework (not .Net Core): [PdfTemplating.XslFO.Razor.AspNetMvc](https://www.nuget.org/packages/PdfTemplating.XslFO.Razor.AspNetMvc/)
-   - Eventually I plan to migrate some of my clients to .Net Core in which case I'll be sure to share out any useful approaches to using Razor Templating to generate markup.
-   - *I'll likely post another blog article on how easy the library makes it to render Razor in-memory in an ASP.Net MVC app (.Net Core is not yet implemented but it's certainly feasible).*
+2. A Razor Templating Library for:
+    1. Asp.NET Framework MVC: [PdfTemplating.XslFO.Razor.AspNetMvc](https://www.nuget.org/packages/PdfTemplating.XslFO.Razor.AspNetMvc/)
+    2. Asp.NET Core MVC (.NET 5+, etc.): [PdfTemplating.XslFO.Razor.AspNetCoreMvc/](https://www.nuget.org/packages/PdfTemplating.XslFO.Razor.AspNetCoreMvc//)
 
 <a name="ApacheFopServerlessClient"></a>
 ##### Rendering the Pdf Binary via ApacheFOP.Serverless REST Client (.Net Standard)
