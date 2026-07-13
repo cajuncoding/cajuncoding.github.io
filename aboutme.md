@@ -11,43 +11,43 @@ published: true
 ---
 
 # Who Dat? (e.g. Who am I?)
-My name is Brandon and I am a [Cajun](https://en.wikipedia.org/wiki/Cajuns), husband, geek, software developer, photographer, traveler, consultant, [LSU alumnus](https://www.lsu.edu/) & [Tiger fan](https://lsusports.net/)!
+My name is Brandon and I am a [Cajun](https://en.wikipedia.org/wiki/Cajuns), husband, father, geek, software architect, photographer, traveler, [LSU alumnus](https://www.lsu.edu/) & [Tiger fan](https://lsusports.net/)!
 
 As a Cajun, my personality is very upbeat and outspoken -- occasionally exhibiting the loud-and-proud element that's oh-so prevalent in [South Louisina](http://www.louisianafolklife.org/LT/Articles_Essays/la_3_folk_reg.html#tab3). But I also believe heavily in teamwork! I’m passionate about software technology, and what I love about consulting is the opportunity it provides to help so many different people, in virtually any industry, use technology to improve their experiences.
 
-I also fancy myself as a [psuedo-renaissance-man of tech things](https://www.dictionary.com/browse/renaissance-man), dabbling in a wide variety of technology from software design/architecture, to home-auotmation and a dash of electronics here and there. And strive to become proficient in the things that most benefit my role as a consultant and make my life easier, or at least more fun! 
+I also fancy myself as a [psuedo-renaissance-man of tech things](https://www.dictionary.com/browse/renaissance-man), dabbling in a wide variety of technology from software design/architecture, to home-auotmation and a dash of electronics here and there. And strive to become proficient in the things that most benefit my role as a enterprise solutions architect and make my life easier, or at least more fun! 
 
 Outside of code, one of my favorite passions, is to express my artistic side with [landscape photography](https://www.flickr.com/photos/77885066@N06/)...always striving to improve and live in the moment of each shutter snap.
 
 If you made it here then I truly hope that you have found something that I've shared to be useful, even if it's to learn _what not to do_.
 
 ## What I do
-The bit above is a little about who I am, and an integral part of what I do...technology consulting!
+The bit above is a little about who I am, and an integral part of what I do...technology solutions!
 
-I am the Director of Technology Consulting at [EXLRT](http://www.exlrt.com) for the US operations. 
+I am the Enterprise Solutions Architect at [AEG Presents](http://www.aegpresents.com) for AEG Digital.
 
 My personal philosophy is to strive to provide a "consultant first..." approach to solving problems, which often yields a very different solution than a "technology first..." mindset. And, I also firmly believe that creating the best solutions is far more art than it is science! 
 
-So by striving for a client-centric & quality based focus, I hope to ensure that solutions add real value by empowering my clients — not constraining them — with technology.
+So by striving for a client-centric & quality based focus, I hope to ensure that solutions add real value by empowering our users — not constraining them — with technology.
 
 ## My experience
-I have 20+ years of experience in technology, consulting, and software development. My development experience is full stack & cross platform, using Microsoft and Java technologies, for enterprise solutions. 
+I have 25+ years of experience in technology, consulting, project management, and software development. My development experience is full stack & cross platform, using Microsoft and Java technologies, for enterprise solutions. 
 
 I've been fortunate enough to work for some amazing enterprises & Fortune 100 companies (see below).  
 
-
 ## Brands that I feel _blessed_ to have worked with (in no particular order):
+- AEG Presents (they run Stagecoach, Coachella, etc.)
 - Starbucks
 - Hewlett Packard
 - ExxonMobil
-- Harris County Engineering Department (Permitting Division)
 - Wells Fargo
 - Boston Consulting Group (BCG)
 - American Express
 - Universal Studios
 - Acer (Tawain)
 - Sodexo & SodexoMyWay
-- AEG Live
+- ExpressJet Airlines
+- Harris County Engineering Department (Permitting Division)
 
 
 ## A little more about my background
@@ -61,4 +61,4 @@ After graudation, I started my professional career in the _Oil & Gas_ field wher
 
 Eventually my frustrations & passion pushed me out of that one industry and into technology consulting where I could learn about many industries, companies, brands, etc.
 
-It's was then ( _circa November 2007_ ) that I re-tooled my technololgy skills, and really embraced my love for software architecture, business soultion design, and client consulting.
+It's was then ( _circa November 2007_ ) that I re-focused my technololgy skills and really embraced my love for software architecture & business soultion designs.
