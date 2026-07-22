@@ -44,7 +44,7 @@ I've been fortunate enough to work for some amazing enterprises & Fortune 100 co
 - Boston Consulting Group (BCG)
 - American Express
 - Universal Studios
-- Acer (Tawain)
+- Acer (Taiwan)
 - Sodexo & SodexoMyWay
 - ExpressJet Airlines
 - Harris County Engineering Department (Permitting Division)
